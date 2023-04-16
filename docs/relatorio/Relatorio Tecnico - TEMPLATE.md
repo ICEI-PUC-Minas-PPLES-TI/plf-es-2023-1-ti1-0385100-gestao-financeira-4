@@ -238,7 +238,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > - Em andamento: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 > - Concluído: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação
 >
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+> ![Exemplo do Quadro Kanban](images/trello-kanban.jpeg)
 
 
 ## Ferramentas
