@@ -81,7 +81,7 @@
 > **PROPOSTA DE VALOR**
 > 
 > **Um dos maiores problemas de Lucas é o desgate na hora da divisão e pagamento com membros do grupo.**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Exemplo da Proposta de Valor](images/proposta-de-valor-lucas.jpg)
 > ***
 > ### Segunda Persona
 > **Geraldo, 45 anos, casado, mora com os filhos e a esposa, trabalha como contador.**
@@ -90,7 +90,7 @@
 > **PROPOSTA DE VALOR**
 > 
 > **Um dos maiores problemas de Geraldo é a falta de organização e clareza na divisão de gastos com a esposa.**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Exemplo da Proposta de Valor](images/proposta-de-valor-geraldo.jpg)
 > ***
 > ### Terceira Persona
 > **Matheus, 25 anos, mora com a namorada, trabalha como bancário.**
@@ -99,7 +99,7 @@
 > **PROPOSTA DE VALOR**
 > 
 > **Um dos maiores problemas de Matheus é a falta de organização ou equilíbrio financeiro..**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Exemplo da Proposta de Valor](images/proposta-de-valor-matheus.jpg)
 > 
 
 
