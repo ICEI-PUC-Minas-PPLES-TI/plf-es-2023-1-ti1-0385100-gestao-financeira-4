@@ -8,7 +8,7 @@
 * Arthur Ferreira Costa
 * Enrique Silva Leite
 * Érica Alves dos Santos
-* Pedro
+* Pedro Arthur Oliveira Silva
 * Sthel Felipe Torres
 
 ## Professores responsáveis
