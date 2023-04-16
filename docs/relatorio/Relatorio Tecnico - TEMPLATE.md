@@ -1,16 +1,16 @@
 # Informações do Projeto
-`Gestão Financeira`  
+`DivideUai`  
 
 `Engenharia de Software` 
 
 ## Participantes
 
 > Os membros do grupo são: 
-> - Arthur
-> - Enrique
-> - Érica
-> - Pedro
-> - Sthel
+> - Arthur Ferreira Costa
+> - Enrique Silva Leite
+> - Érica Alves dos Santos
+> - Pedro Arthur Oliveira Silva
+> - Sthel Felipe Torres
 
 # Estrutura do Documento
 
@@ -73,18 +73,34 @@
 > - Por fim, a Proposta de Valor é uma ferramenta que ajuda a definir a proposta única e diferenciada do produto ou serviço em relação aos seus concorrentes. Ela envolve identificar os benefícios que o produto ou serviço oferece para o usuário, além de destacar as características que o diferenciam das outras opções disponíveis no mercado.
 
 ## Personas, Empatia e Proposta de Valor
-> **Lucas, 22 anos, solteiro, mora com os amigos, cursando Direito. **
+>
+> ### Primeira Persona
+> **Lucas, 22 anos, solteiro, mora com os amigos, cursando Direito.**
 > ![Exemplo de Persona](images/persona.png)
-> ***
-> **Geraldo, 45 anos, casado, mora com os filhos e a esposa, trabalha como contador. **
-> ![Exemplo de Persona](images/persona.png)
-> ***
->  **Matheus, 25 anos, mora com a namorada, trabalha como bancário. **
-> ![Exemplo de Persona](images/persona.png)
-> ***
 > 
-> **Exemplo de Proposta de Valor**
+> **PROPOSTA DE VALOR**
+> 
+> **Um dos maiores problemas de Lucas é o desgate na hora da divisão e pagamento com membros do grupo.**
 > ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ***
+> ### Segunda Persona
+> **Geraldo, 45 anos, casado, mora com os filhos e a esposa, trabalha como contador.**
+> ![Exemplo de Persona](images/persona.png)
+> 
+> **PROPOSTA DE VALOR**
+> 
+> **Um dos maiores problemas de Geraldo é a falta de organização e clareza na divisão de gastos com a esposa.**
+> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ***
+> ### Terceira Persona
+> **Matheus, 25 anos, mora com a namorada, trabalha como bancário.**
+> ![Exemplo de Persona](images/persona.png)
+> 
+> **PROPOSTA DE VALOR**
+> 
+> **Um dos maiores problemas de Matheus é a falta de organização ou equilíbrio financeiro..**
+> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> 
 
 
 ## Histórias de Usuários
