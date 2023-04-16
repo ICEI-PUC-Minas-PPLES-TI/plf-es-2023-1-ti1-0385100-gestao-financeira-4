@@ -81,7 +81,7 @@
 > **PROPOSTA DE VALOR**
 > 
 > **Um dos maiores problemas de Lucas é o desgate na hora da divisão e pagamento com membros do grupo.**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Exemplo da Proposta de Valor](images/proposta-de-valor-lucas.jpg)
 > ***
 > ### Segunda Persona
 > **Geraldo, 45 anos, casado, mora com os filhos e a esposa, trabalha como contador.**
@@ -90,7 +90,7 @@
 > **PROPOSTA DE VALOR**
 > 
 > **Um dos maiores problemas de Geraldo é a falta de organização e clareza na divisão de gastos com a esposa.**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Exemplo da Proposta de Valor](images/proposta-de-valor-geraldo.jpg)
 > ***
 > ### Terceira Persona
 > **Matheus, 25 anos, mora com a namorada, trabalha como bancário.**
@@ -99,7 +99,7 @@
 > **PROPOSTA DE VALOR**
 > 
 > **Um dos maiores problemas de Matheus é a falta de organização ou equilíbrio financeiro..**
-> ![Exemplo da Proposta de Valor](images/proposta_valor.png)
+> ![Exemplo da Proposta de Valor](images/proposta-de-valor-matheus.jpg)
 > 
 
 
@@ -233,6 +233,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > - Equipe de Desenvolvimento: Arthur, Enrique, Erica, Pedro e Sthel.
 >
 > Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas:
+> - Recursos: esta lista mantém um template de tarefas recorrentes com as configurações padronizadas que todos devem seguir. O objetivo é permitir a cópia destes templates para agilizar a criação de novos cartões.
 > - Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
 > - A Fazer: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
 > - Em andamento: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
