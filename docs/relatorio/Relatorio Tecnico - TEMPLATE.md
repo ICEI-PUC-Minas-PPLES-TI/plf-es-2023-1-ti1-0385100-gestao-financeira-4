@@ -1,7 +1,9 @@
 # Informações do Projeto
-`DivideUai`  
+`DivideUai` 
+> O DivideUai é um software que ajuda a resolver um dos maiores problemas financeiros de quem divide contas com amigos ou familiares: como fazer a matemática da divisão certinha e sem confusão. Com ele, é possível criar grupos, registrar todas as despesas e o sistema faz todo o trabalho pesado, dividindo tudo corretamente entre as pessoas. Além disso, o DivideUai também é útil para quem quer ter um controle dos gastos mensais. É uma ótima opção para evitar brigas com amigos por causa de dinheiro e manter as finanças em dia.
 
 `Engenharia de Software` 
+>O trabalho interdisciplinar do curso de Engenharia de Software consiste em um projeto que envolve desde a documentação até o desenvolvimento e entrega de um software real. Os alunos são divididos em equipes e, com base em um problema real apresentado pelo professor, desenvolvem todo o processo de engenharia de software, desde a concepção da ideia até a implementação e entrega do produto final. Durante o processo, os alunos aplicam os conhecimentos de diversas disciplinas, como programação, gerenciamento de projetos, e design de interface, trabalhando de forma colaborativa e integrada. O resultado final é um software funcional e de qualidade, que atende às necessidades do cliente e demonstra a competência e habilidades adquiridas pelos alunos ao longo do curso.
 
 ## Participantes
 
@@ -36,16 +38,6 @@
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
-- [**############## SPRINT 1 ACABA AQUI #############**](#-sprint-1-acaba-aqui-)
-- [Projeto da Solução](#projeto-da-solução)
-  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-  - [Arquitetura da solução](#arquitetura-da-solução)
-- [Avaliação da Aplicação](#avaliação-da-aplicação)
-  - [Plano de Testes](#plano-de-testes)
-  - [Ferramentas de Testes (Opcional)](#ferramentas-de-testes-opcional)
-  - [Registros de Testes](#registros-de-testes)
-- [Referências](#referências)
-
 
 # Introdução
 
@@ -109,31 +101,35 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`   |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Quero poder criar um grupo e adicionar facilmente os membros para compartilhar despesas| Para evitar conflitos e garantir que todos paguem de maneira justa.|
+|Lucas |Quero poder criar um grupo e adicionar facilmente os membros para compartilhar despesas| Para evitar conflitos e garantir que todos paguem de maneira justa.|
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Quero receber notificações de pagamentos pendentes e vencidos| Para que possa lembrar os membros do grupo de suas obrigações financeiras sem confrontos.|
+|Lucas |Quero receber notificações de pagamentos pendentes e vencidos| Para que possa lembrar os membros do grupo de suas obrigações financeiras sem confrontos.|
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Quero visualizar relatórios de gastos e despesas compartilhadas| Para que possa entender melhor meus hábitos de consumo e tomar decisões financeiras mais conscientes.|
+|Lucas |Quero visualizar relatórios de gastos e despesas compartilhadas| Para que possa entender melhor meus hábitos de consumo e tomar decisões financeiras mais conscientes.|
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Quero poder adicionar facilmente despesas de eventos compartilhados| Para que possamos dividir as contas de maneira justa e sem complicações.|
+|Lucas |Quero poder adicionar facilmente despesas de eventos compartilhados| Para que possamos dividir as contas de maneira justa e sem complicações.|
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Eu quero um software que facilite a divisão de gastos em grupo| Para evitar conflitos e desgastes com os membros do grupo e ter um controle mais eficiente dos gastos.|
+|Geraldo |Eu quero um software que facilite a divisão de gastos em grupo| Para evitar conflitos e desgastes com os membros do grupo e ter um controle mais eficiente dos gastos.|
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Eu quero ter um controle mais eficiente dos gastos em casa| Para evitar desperdícios e garantir que todos os membros da família possam contribuir com as despesas de forma equilibrada e justa.|
+|Geraldo |Eu quero ter um controle mais eficiente dos gastos em casa| Para evitar desperdícios e garantir que todos os membros da família possam contribuir com as despesas de forma equilibrada e justa.|
 
 |EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  |Eu quero um software que facilite a divisão de gastos em casa e que me ajude a ter clareza sobre meus gastos| Para ter uma melhor organização financeira.|
+|Mathues |Eu quero um software que facilite a divisão de gastos em casa e que me ajude a ter clareza sobre meus gastos| Para ter uma melhor organização financeira.|
+
+|EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`  |PARA ...`MOTIVO/VALOR`                 |
+|--------------------|------------------------------------|----------------------------------------|
+|Mathues |Eu quero ter um controle mais eficiente dos gastos em casa| Para evitar desperdícios e garantir que todos os membros da família possam contribuir com as despesas.|
 
 ## Requisitos
 
@@ -144,20 +140,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| O sistema deve permitir que usuários possam se cadastrar ou efetuar login | ALTA | 
-|RF-002| O sistema deve permitir que o usuário possa criar grupos de acordo com suas necessidades | MÉDIA |
+|RF-002| O sistema deve permitir que o usuário possa criar grupos de acordo com suas necessidades | ALTA |
 |RF-003| O sistema deve adicionar novos usuários em grupos específicos | MÉDIA |
 |RF-004| O sistema deve permitir que o usuário possa criar, editar e excluir grupos de acordo com suas necessidades | MÉDIA |
-|RF-005| O sistema deve permitir que o usuário possa calcular automaticamente a divisão de gastos e retornar para cada individuo do grupo o valor a ser pago e para quem deve ser pago | MÉDIA |
+|RF-005| O sistema deve permitir que o usuário possa calcular automaticamente a divisão de gastos e retornar para cada individuo do grupo o valor a ser pago e para quem deve ser pago | BAIXA |
 |RF-006| O sistema deve permitir que o usuário veja o histórico de seus gastos pessoais ou em grupo | MÉDIA |
-|RF-007| O sistema deve permitir que o usuário veja o histórico de seus gastos (pessoais ou em grupo) | MÉDIA |
-
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser seguro para cadastro de dados | MÉDIA | 
-|RNF-002| O sistema deve ser compatível para diversos navegadores e dispositivos  |  BAIXA | 
+|RNF-002| O sistema deve ser compatível para diversos navegadores e dispositivos  |  MÉDIA | 
 |RNF-003| O sistema deve ser fácil de usar e intuitivo  |  BAIXA | 
 |RNF-004| O sistema deve retornar respostas rápidas às solicitações do usuário  |  BAIXA |
 
@@ -222,7 +216,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 # Metodologia
 
 > Para começar, o projeto utilizou duas metodologias ágeis muito populares atualmente: o Design Thinking e o Scrum. O Design Thinking é uma abordagem centrada no usuário que busca entender as necessidades e desejos dos usuários para desenvolver soluções inovadoras e criativas. Já o Scrum é um framework ágil para gestão de projetos que se baseia em entregas frequentes e iterativas, organizadas em sprints de curta duração.
->No processo de trabalho, foram utilizadas diversas ferramentas para auxiliar na comunicação, organização e gestão do projeto. O Trello foi utilizado para criar um quadro de tarefas, onde foram listadas todas as atividades do projeto e atribuídas aos membros da equipe. O Miro foi utilizado para criar um mapa mental colaborativo, onde foram organizadas as ideias e soluções geradas durante as sessões de Design Thinking. O OneDrive foi utilizado para armazenar e compartilhar arquivos e documentos do projeto, como relatórios e apresentações. Por fim, o GitHub foi utilizado para hospedar o código-fonte do projeto e permitir a colaboração entre os membros da equipe.
+>No processo de trabalho, foram utilizadas diversas ferramentas para auxiliar na comunicação, organização e gestão do projeto, como o Trello, OndeDrive, GitHub, Miro e Figma.
 > A configuração do projeto no GitHub foi realizada de forma muito simples e intuitiva. Primeiramente, foi criado um repositório para o projeto, onde será armazenado o código-fonte. Em seguida, foram criados branches para cada nova funcionalidade do projeto, permitindo que os membros da equipe trabalhassem em paralelo em diferentes partes do projeto. Por fim, foram criados pull requests para revisão e integração das alterações realizadas nos branches.
 > Em resumo, o projeto utilizou as metodologias ágeis Design Thinking e Scrum, bem como diversas ferramentas, como Trello, Miro, OneDrive e GitHub etc, para facilitar a comunicação, organização e gestão do projeto. A configuração do projeto via GitHub foi simples e permitirá a colaboração entre os membros da equipe de forma eficiente.
 
@@ -252,7 +246,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Ferramentas
 
-> Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue. 
+> O Trello foi utilizado para criar um quadro de tarefas, onde foram listadas todas as atividades do projeto e atribuídas aos membros da equipe. O Miro foi utilizado para criar um mapa mental colaborativo, onde foram organizadas as ideias e soluções geradas durante as sessões de Design Thinking. O OneDrive foi utilizado para armazenar e compartilhar arquivos e documentos do projeto, como relatórios e apresentações. O Figma foi utilizado pois é uma ferramenta de design de interface de usuário baseada em nuvem que permite a criação de wireframes, protótipos e designs interativos, permitindo a criação de designs precisos e colaborativos. Por fim, o GitHub foi utilizado para hospedar o código-fonte do projeto e permitir a colaboração entre os membros da equipe.
 
 | Ambiente  | Plataforma              |Link de Acesso |
 |-----------|-------------------------|---------------|
@@ -261,7 +255,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |Documentos do projeto | OneDrive | https://sgapucminasbr-my.sharepoint.com/:f:/g/personal/1456541_sga_pucminas_br/Eqr6PXbV_-FGiHludDMe9bcBJ3Vk-AUCa8rbuYk7MuIuvg?e=RROfKr| 
 |Gerenciamento do Projeto | Trello | https://trello.com/invite/b/9zGY7rlk/ATTI1ac77542fc46727aacf251348116eb3152C50BC2/gestao-financeira| 
 |Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
+|Protótipo Interativo | Figma | https://www.figma.com/file/LeH195No6KOcSYYMkdIdv1/DivideUai!?node-id=140%3A1789&t=oFCZ284pPuPSay3Z-1| 
 
 > As ferramentas empregadas no projeto são:
 > 
