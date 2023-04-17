@@ -86,7 +86,7 @@
 > ***
 > ### Terceira Persona
 > **Matheus, 25 anos, mora com a namorada, trabalha como bancário.**
-> ![Exemplo de Persona](images/images/persona-matheus.jpg)
+> ![Exemplo de Persona](images/persona-matheus.jpg)
 > 
 > **PROPOSTA DE VALOR**
 > 
