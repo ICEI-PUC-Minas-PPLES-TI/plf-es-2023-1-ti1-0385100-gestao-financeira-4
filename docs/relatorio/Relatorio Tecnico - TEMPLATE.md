@@ -212,7 +212,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > 
 > ![Exemplo de Wireframe](images/wireframe-example.png)
 
-
 # Metodologia
 
 > Para começar, o projeto utilizou duas metodologias ágeis muito populares atualmente: o Design Thinking e o Scrum. O Design Thinking é uma abordagem centrada no usuário que busca entender as necessidades e desejos dos usuários para desenvolver soluções inovadoras e criativas. Já o Scrum é um framework ágil para gestão de projetos que se baseia em entregas frequentes e iterativas, organizadas em sprints de curta duração.
