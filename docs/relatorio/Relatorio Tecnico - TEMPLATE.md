@@ -68,7 +68,7 @@
 >
 > ### Primeira Persona
 > **Lucas, 22 anos, solteiro, mora com os amigos, cursando Direito.**
-> ![Exemplo de Persona](images/persona.png)
+> ![Exemplo de Persona](images/persona-lucas.jpg)
 > 
 > **PROPOSTA DE VALOR**
 > 
@@ -77,7 +77,7 @@
 > ***
 > ### Segunda Persona
 > **Geraldo, 45 anos, casado, mora com os filhos e a esposa, trabalha como contador.**
-> ![Exemplo de Persona](images/persona.png)
+> ![Exemplo de Persona](images/persona-geraldo.jpg)
 > 
 > **PROPOSTA DE VALOR**
 > 
@@ -86,7 +86,7 @@
 > ***
 > ### Terceira Persona
 > **Matheus, 25 anos, mora com a namorada, trabalha como bancário.**
-> ![Exemplo de Persona](images/persona.png)
+> ![Exemplo de Persona](images/images/persona-matheus.jpg)
 > 
 > **PROPOSTA DE VALOR**
 > 
