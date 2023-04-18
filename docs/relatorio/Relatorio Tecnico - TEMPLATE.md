@@ -195,22 +195,37 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
+## Tela - Login
 
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
+> ![Exemplo de Wireframe](images/Login.jpg)
+
+## Tela - Cadastro
+
+> ![Exemplo de Wireframe](images/Cadastro.jpg)
+
+## Tela - Home Page
+
+> ![Exemplo de Wireframe](images/Tela inicial.jpg)
+
+## Tela - Grupos
+
+> ![Exemplo de Wireframe](images/Grupos.jpg)
+
+## Tela - Eventos
+
+> ![Exemplo de Wireframe](images/Eventos.jpg)
+
+## Tela - Historico
+
+> ![Exemplo de Wireframe](images/Histórico.jpg)
+
+## Tela - Lançar Gastos
+
+> ![Exemplo de Wireframe](images/Lançar gastos.jpg)
+
+## Tela - Relátorio Geral
+
+> ![Exemplo de Wireframe](images/Relatório geral.jpg) 
 
 # Metodologia
 
