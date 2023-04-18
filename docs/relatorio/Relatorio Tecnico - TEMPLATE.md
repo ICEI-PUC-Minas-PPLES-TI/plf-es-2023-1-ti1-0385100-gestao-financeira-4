@@ -197,17 +197,35 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Tela - Login
 
+> A Tela de Login permite o usúário acesse o nosso software, DivideUai.
+> - Email: campo onde o usuário insere seu endereço de email registrado na plataforma.
+> - Senha: campo onde o usuário insere a senha associada à sua conta.
+> - Esqueci minha senha: opção que permite que o usuário redefina sua senha em caso de esquecimento ou perda.
+> - Botão de acessar: botão que, quando clicado, verifica as credenciais do usuário e, se for bem-sucedido, concede acesso ao sistema.
+
 > ![Exemplo de Wireframe](images/Login.jpg)
 
 ## Tela - Cadastro
 
+> A Tela de Cadastro permite o usúário de casastre no nosso software, DivideUai.
+> - Email: campo onde o usuário insere seu endereço de email registrado na plataforma.
+> - Senha: campo onde o usuário insere a senha associada à sua conta.
+> - Começar a usar: botão que, quando clicado, verifica as credenciais do usuário e, se for bem-sucedido, concede acesso ao sistema.
+
 > ![Exemplo de Wireframe](images/Cadastro.jpg)
 
 ## Tela - Home Page
+> Ao acessar ou se cadastrar na DivideUai, será possível visualizar a página inicial, que possui um cabeçalho lateral do lado esquerdo, com os seguinte menus: E além disso, é possível pesquisar por nome ou código do nome do grupo/evento criado, é possível ter uma pré-visualização dos seus grupos ou do histórico dos seus gastos lançados. 
+> - Home
+> - Grupos
+> - Eventos
+> - Histórico 
+> - Configurações <br>
 
-> ![Exemplo de Wireframe](images/Tela inicial.jpg)
+> ![Exemplo de Wireframe](images/TelaInicial.jpg)
 
 ## Tela - Grupos
+> Ao Acessar o menu Grupos, o usuário será direcionado para uma tela de Grupos, onde será possível visualizar ou grupos criados ou criar caso necessário. 
 
 > ![Exemplo de Wireframe](images/Grupos.jpg)
 
@@ -221,11 +239,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Tela - Lançar Gastos
 
-> ![Exemplo de Wireframe](images/Lançar gastos.jpg)
+> ![Exemplo de Wireframe](images/LancarGastos.jpg)
 
 ## Tela - Relátorio Geral
 
-> ![Exemplo de Wireframe](images/Relatório geral.jpg) 
+> ![Exemplo de Wireframe](images/RelatorioGeral.jpg) 
 
 # Metodologia
 
