@@ -174,21 +174,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > funcionais e histórias de usuário abordados nas [Especificações do
 > Projeto](#especificações-do-projeto).
 
+>    
+
 ## User Flow
-
-......  INCLUA AQUI O DIAGRAMA COM O FLUXO DO USUÁRIO NA APLICAÇÃO ......
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
->
-> **Exemplo**:
 > 
 > ![Exemplo de UserFlow](images/userflow.jpg)
 
@@ -215,12 +203,14 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > ![Exemplo de Wireframe](images/Cadastro.jpg)
 
 ## Tela - Home Page
-> Ao acessar ou se cadastrar na DivideUai, será possível visualizar a página inicial, que possui um cabeçalho lateral do lado esquerdo, com os seguinte menus: E além disso, é possível pesquisar por nome ou código do nome do grupo/evento criado, é possível ter uma pré-visualização dos seus grupos ou do histórico dos seus gastos lançados. 
+> Ao acessar ou se cadastrar na DivideUai, será possível visualizar a página inicial, que possui um cabeçalho lateral do lado esquerdo, com os seguinte menus:
 > - Home
 > - Grupos
 > - Eventos
 > - Histórico 
 > - Configurações <br>
+> 
+> E além disso, é possível pesquisar por nome ou código do nome do grupo/evento criado, é possível ter uma pré-visualização dos seus grupos ou do histórico dos seus gastos lançados. 
 
 > ![Exemplo de Wireframe](images/TelaInicial.jpg)
 
@@ -231,17 +221,25 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Tela - Eventos
 
+> Ao acessar o menu de Eventos, o  usuários será direcionado para uma tela de Eventos, onde será possível visualizar os eventos criados ou criar caso necessário.
+
 > ![Exemplo de Wireframe](images/Eventos.jpg)
 
-## Tela - Historico
+## Tela - Histórico
+
+> Ao acessar o menu de Histórico, o usúario será direcionado para a tela de Históricos, onde será possível visualizar todos os seus gastos lançados, com a descrição, categoria, valor, data, grupo  e reponsáveis, também será possível filtrar por eventos ou grupos.
 
 > ![Exemplo de Wireframe](images/Histórico.jpg)
 
 ## Tela - Lançar Gastos
 
+> Ao criar um evento, será possível fazer o lançamento de gastos dentro desse evento, ao clicar no ícone de mais, irá abrir um um modal, que será possível adiconar nos seguintes campos: descrição, categoria, valor, data, grupo  e reponsáveis. Ao fazer lançamentos, será possível visualizar os lançamentos nas telas, e enquanto o evento estiver em aberto, será possível adicionar os gastos, após fechar a conta, automáticamente seus gastos irão ser processados no relatório e serão adicionados no histórico.
+
 > ![Exemplo de Wireframe](images/LancarGastos.jpg)
 
 ## Tela - Relátorio Geral
+
+> Ao acessar a tela de Relátorio Geral, também será possível visualizar o histórico de gastos lançados, e os repasses que deverá ser feitos para cada membro adicionados nos grupos ou membros. 
 
 > ![Exemplo de Wireframe](images/RelatorioGeral.jpg) 
 
@@ -273,8 +271,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > - Infraestrutura
 > - Testes
 > - Gerência de Projetos.
-
-
 
 ## Ferramentas
 
