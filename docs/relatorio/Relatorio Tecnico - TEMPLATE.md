@@ -167,14 +167,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-......  COLOQUE AQUI O SEU TEXTO DE INTRODUÇÃO ......
-
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
-
->    
+> O nosso sistema possui diversas telas que permitem uma experiência completa ao usuário. As telas incluem a de cadastro e login, que são necessárias para acessar o sistema. Já a tela inicial permite uma visualização prévia do histórico de gastos e dos grupos já criados, o que torna o acesso ao sistema mais ágil.
+> Ao acessar o menu, o usuário poderá selecionar diferentes opções, como Grupos, onde é possível visualizar e criar grupos, e Eventos, onde é possível visualizar eventos ou criar novos. Além disso, o menu Histórico permite visualizar os gastos lançados nos grupos ou eventos, facilitando a compreensão da movimentação financeira do usuário.
+> O nosso site foi desenvolvido para atender os requisitos funcionais e não-funcionais, que foram levantados durante a documentação e as histórias de usuário. Esses requisitos foram elaborados com base nas necessidades dos clientes, que desejam ter a possibilidade de criar grupos e lançar gastos, visualizar o histórico de gastos lançados, fazer divisão de gastos e outras funcionalidades que tornam a gestão financeira mais fácil e eficiente.
 
 ## User Flow
 > 
