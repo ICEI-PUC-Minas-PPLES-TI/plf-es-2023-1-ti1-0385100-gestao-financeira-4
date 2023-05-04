@@ -279,7 +279,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |Gerenciamento do Projeto | Trello | https://trello.com/invite/b/9zGY7rlk/ATTI1ac77542fc46727aacf251348116eb3152C50BC2/gestao-financeira| 
 |Protótipo Interativo | Figma | https://www.figma.com/file/LeH195No6KOcSYYMkdIdv1/DivideUai!?node-id=140%3A1789&t=oFCZ284pPuPSay3Z-1 | 
 
-> As ferramentas empregadas no projeto são:
+> Outras ferramentas empregadas no projeto são:
 > 
 > - Visual Studio Code.
 > - Discord
