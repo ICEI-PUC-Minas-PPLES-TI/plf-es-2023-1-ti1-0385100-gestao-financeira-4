@@ -32,13 +32,11 @@ body {
 
 
 /* Ínicio Side bar Menu*/
-nav.menu-lateral {
-  height: 100%;
+aside.menu-lateral {
+  height: 100vh;
   padding: 2em 0 0 2%;
   box-shadow: 7.62353px 0px 22.8706px rgba(0, 0, 0, 0.06);
-  position: fixed;
-  left: 0;
-  top: 0;
+  z-index: 999;
 } 
 
 .logo-menu img{
