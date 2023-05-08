@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  /* Resetando o CSS*/
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  font-style: none;
+  text-decoration: none;
+}
+ 
+:root {
+  /*Cores globais*/
+  --text-dark: #192a3e;
+  --text-light: #90a0b7;
+  --text-white: #fff;
+  --table-grey: #00000002;
+  --table-ice: #f5f5f7;
+  --color-green: #2ed47a;
+  --color-blue: #109cf1;
+  --color-yellow: #ffb946;
+  --color-red: #f7685b;
+  --color-purple: #885af8;
+}
+
+body {
+  height: 100vh;
+}
+
+
+/* Ínicio Side bar Menu*/
+nav.menu-lateral {
+  height: 100%;
+  padding: 2em 0 0 2%;
+  box-shadow: 7.62353px 0px 22.8706px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  left: 0;
+  top: 0;
+} 
+
+.logo-menu img{
+  width: 10em;
+  margin-bottom: 4em;
+}
+
+ul li {
+  padding-bottom: 24px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--text-light);
+}
+
+ul li a span { 
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ul li a span i { 
+  font-size: 20px;
+}
+
+ul li a:hover span i {
+  color: var(--color-green);
+}
+
+ul li a:hover span  {
+  color: var(--color-green);
+}
+
+/* Fim Side bar Menu*/
