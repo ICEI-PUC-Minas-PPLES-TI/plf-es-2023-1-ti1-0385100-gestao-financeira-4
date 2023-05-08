@@ -13,12 +13,13 @@
   </head>
 
   <body>
-    <div class="container-fluid borda">
+
+    <div class="container-fluid borda PaiDeTodos">
 
       <div class="row">
 
         <!-- Side bar Global -->
-        <nav class="col-md-2 menu-lateral">
+        <aside class="col-md-2 menu-lateral">
           <div class="logo-menu">
             <img
               src="/codigo/assets/images/logos/Logo-Horizontal.png"
@@ -52,12 +53,77 @@
               </a>
             </li>
           </ul>
-        </nav>
+        </aside>
 
         <!-- Conteúdo da página -->
 
-        <main class="col-md-10">
+        <main class="col-md-10 container p-5">
+
+          <div class="headline">
+            <h1>Seus grupos</h1>
+            <button>+</button>
+          </div>
           
+          <!--Cards-->
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <img src="/codigo/assets/images/logos/Logo-Vertical.png" alt="">
+
+                  <div class="card-contents d-flex">
+                    <div class="card-texts ">
+                      <h5 class="card-title">Pessoal</h5>
+                      <h6 class="card-subtitle mb-2 text-body-secondary">7 eventos</h6>
+                    </div>
+                    <span>
+                      <button class="edit-group">Edit</button>
+                      <button class="delete-group">Delet</button>
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+     
         </main>
 
       </div>
