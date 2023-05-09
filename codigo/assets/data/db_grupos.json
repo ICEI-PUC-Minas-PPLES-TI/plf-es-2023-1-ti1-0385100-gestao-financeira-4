@@ -12,7 +12,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/pessoal_db.jpg"
     },
     {
       "id": 2,
@@ -27,7 +27,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/familia_db.jpg"
     },
     {
       "id": 3,
@@ -42,7 +42,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/apartamento_db.jpg"
     },
     {
       "id": 4,
@@ -57,7 +57,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/role_db.jpg"
     },
     {
       "id": 5,
@@ -72,7 +72,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/faculdade_db.jpg"
     },
     {
       "id": 6,
@@ -87,7 +87,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/compras_db.jpg"
     },
     {
       "id": 7,
@@ -102,7 +102,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/viagens_db.jpg"
     },
     {
       "id": 8,
@@ -117,7 +117,7 @@
           "quantidade": 7
         }
       ],
-      "image": "https://picsum.photos/200/120?id=2"
+      "image": "../assets/images/grupos/pelada_db.jpg"
     }
   ]
   
