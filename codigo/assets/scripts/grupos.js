@@ -5,8 +5,8 @@ function buscaGruposAPI() {
     .then(function (response) {
       return response.json();
     })
-      .then(function (db) {
-     var textoHtml = "";
+    .then(function (db) {
+      var textoHtml = "";
       for (i = 0; i < db.length; i++) {
         const grupo = db[i];
         textoHtml += `<div class="col-md-3">
@@ -22,7 +22,7 @@ function buscaGruposAPI() {
         </div>
       </div>`;
       }
-      
+
       cardsContainer.innerHTML = textoHtml;
     });
 }
