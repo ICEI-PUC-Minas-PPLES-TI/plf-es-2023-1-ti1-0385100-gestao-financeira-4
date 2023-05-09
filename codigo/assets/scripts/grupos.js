@@ -1,12 +1,12 @@
 function buscaGruposAPI() {
   const cardsContainer = document.getElementById("listagem-grupos");
-  textoHtml = "";
 
-  fetch("db_grupos.json")
+  fetch("../assets/data/db_grupos.json")
     .then(function (response) {
       return response.json();
     })
-    .then(function (db) {
+      .then(function (db) {
+     var textoHtml = "";
       for (i = 0; i < db.length; i++) {
         const grupo = db[i];
         textoHtml += `<div class="col-md-3 ">
