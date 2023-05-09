@@ -73,3 +73,15 @@ ul li a:hover span  {
 }
 
 /* Fim Side bar Menu*/
+
+/* Início Padronização de botões */
+
+.btn-add {
+  color: var(--text-white);
+  background-color: var(--color-green);
+  font-size: 30px !important;
+  font-weight: bold !important;
+  height: 50px;
+}
+
+/* Fim Padronização de botões */
