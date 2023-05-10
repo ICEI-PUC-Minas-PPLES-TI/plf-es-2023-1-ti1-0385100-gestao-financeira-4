@@ -52,6 +52,7 @@
       <!-- Conteúdo da página -->
       <main class="col-md-10 container p-5 mt-3">
         <div class="headline">
+
           <h1>Seus grupos</h1>
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-add py-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -68,8 +69,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <input type="image" src="" alt="Adicionar imagem grupo">
+                <input type="file" name="ImgGrupo" id="ImgGrupo">
                 <input type="text" name="Titulo-do-grupo" id="titulo-grupo">
+                <select name="CatGupo" id="CatGrupo">
+                  <option value="Pessoal">Pessoal</option>
+                  <option value="Gruop">Gupo</option>
+                </select>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
