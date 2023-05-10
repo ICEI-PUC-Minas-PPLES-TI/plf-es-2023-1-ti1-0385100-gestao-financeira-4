@@ -70,21 +70,23 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="modal-header d-flex ">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de grupo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
               </div>
               <div class="modal-body">
+                <p>Imagem do grupo</p>
                 <input type="file" name="ImgGrupo" id="ImgGrupo">
+                <p>Título do grupo</p>
                 <input type="text" name="Titulo-do-grupo" id="titulo-grupo">
+                <p>Categoria</p>
                 <select name="CatGupo" id="CatGrupo">
                   <option value="Pessoal">Pessoal</option>
                   <option value="Gruop">Gupo</option>
                 </select>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Cadastrar grupo</button>
               </div>
             </div>
           </div>
