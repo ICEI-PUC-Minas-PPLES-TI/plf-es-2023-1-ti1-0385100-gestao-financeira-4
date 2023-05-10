@@ -10,7 +10,7 @@ function buscaGruposAPI() {
       for (i = 0; i < db.length; i++) {
         const grupo = db[i];
         textoHtml += `<div class="col-md-3">
-        <div class="card">
+        <div class="card h-100">
         <div class="card-body">
           <img src="${grupo.image}" class="card-img-top" alt="...">
             <h5 class="card-title">${grupo.titulo}</h5>
