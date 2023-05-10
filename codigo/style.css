@@ -1,26 +1,5 @@
-.wrapper {
+.headline {
   display: flex;
-  width: 100%;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 200px;
-  height: 100%;
-  background-color: #f8f9fa;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: darkcyan;
-}
-
-.sidebar ul li a{
-    text-align: center;
-    color: white;
-}
-
-.content {
-  margin-left: 200px;
-  padding: 20px;
+  justify-content: space-between;
+  padding-bottom: 1em;
 }
