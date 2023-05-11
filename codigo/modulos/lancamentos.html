@@ -69,7 +69,34 @@
             Fechar a conta 
           </button>
         </div>
-    
+        <!-- Modal de criar lançamento de gastos-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header d-flex ">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Gastos</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
+              </div>
+              <div class="modal-body">
+                <p>Descrição</p>
+                <input type="text" name="Descrição" id="Descrição" maxlength="20">
+                <p>Categoria</p>
+                <input type="text" name="Categoria" id="Categoria" maxlength="12">
+                <p>Valor</p>
+                <input type="text" name="Valor" id="Valor" placeholder="R$" maxlength="8">
+                <p>Data</p>
+                <input type="text" name="Data" id="Data" maxlength="5">
+                <p>Grupo</p>
+                <input type="text" name="Grupo" id="Grupo" maxlength="20">
+                <p>Responsáveis</p>
+                <input type="text" name="Responsáveis" id="Responsáveis" maxlength="35">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Cadastrar gastos</button>
+              </div>
+            </div>
+          </div>
+        </div>
     <head>
         <title>Tabela</title>
         <link rel="stylesheet" type="text/css" href="style.css">
