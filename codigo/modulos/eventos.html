@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/eventos.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
 </head>
+
 <body>
-    
+  <div class="container-fluid PaiDeTodos">
+    <div class="row">
+
+      <!-- Início Side bar Global -->
+      <div class="col-md-2">
+      </div>
+
+      <aside class="col-md-2 menu-lateral">
+
+        <div class="logo-menu">
+          <img src="../assets/images/logos/Logo-Horizontal.png" alt="Logo vertical DivideUai!" />
+        </div>
+
+        <ul>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-columns-gap"></i> </span>
+              <span class="txt-link">Home</span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-person-plus"></i></span>
+              <span class="txt-link">Grupos</span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-calendar-event"></i></span>
+              <span class="txt-link">Eventos</span>
+            </a>
+          </li>
+          <li class="item-menu">
+            <a href="#">
+              <span class="icon"><i class="bi bi-card-checklist"></i></span>
+              <span class="txt-link">Histórico</span>
+            </a>
+          </li>
+        </ul>
+
+      </aside>
+      <!-- Fim Side bar Global -->
+
+      <!-- Conteúdo da página -->
+      <main class="col-md-10 container p-5 mt-3">
+        <div class="headline">
+
+          <h1>Seus eventos</h1>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-add py-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            +
+          </button>
+        </div>
+
+        <!-- Modal de criar grupos-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header d-flex ">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Gastos</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
+                </div>
+                <div class="modal-body">
+                  <p>Imagem do grupo</p>
+                  <input type="file" name="ImgGrupo" id="ImgGrupo" style="margin-bottom: 3px;">
+                  <p>Título</p>
+                  <input type="text" name="Título" id="Título" maxlength="20">
+                  <p>Grupo</p>
+                  <input type="Grupo" name="Grupo" id="Grupo" maxlength="20">
+                  <p>Pessoas</p>
+                  <input type="text" name="Pessoas" id="Pessoas" maxlength="35">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Cadastrar gastos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div>
+          <div id="listagem-grupos" class="row">
+            <!--Cards-->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="../assets/scripts/eventos.js"></script>
 </body>
+
 </html>
