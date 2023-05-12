@@ -49,8 +49,6 @@ function excluirCard(cardId) {
   const updatedCards = cardsLocalStorage.filter((card) => card.id !== cardId);
   salvaDadosLocalStorage(updatedCards);
   exibeTodosGrupos();
-
-  console.log(excluirCard())
 }
 
 // Busca os dados do JSON
