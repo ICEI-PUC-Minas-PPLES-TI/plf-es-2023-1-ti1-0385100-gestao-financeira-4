@@ -3,13 +3,13 @@
       "id": 1,
       "titulo": "Pessoal",
       "categoria": "individual",
+      "quantidade": 7,
       "evento": [
         {
           "id": 2,
           "titulo": "Pensando1",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/pessoal_db.jpg"
@@ -18,13 +18,13 @@
       "id": 2,
       "titulo": "Família",
       "categoria": "compartilhado",
+      "quantidade": 7,
       "evento": [
         {
           "id": 3,
           "titulo": "Pensando2",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/familia_db.jpg"
@@ -33,13 +33,13 @@
       "id": 3,
       "titulo": "Apartamento",
       "categoria": "compartilhado",
+      "quantidade": 7,
       "evento": [
         {
           "id": 4,
           "titulo": "Pensando3",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/apartamento_db.jpg"
@@ -48,13 +48,13 @@
       "id": 4,
       "titulo": "Rolês",
       "categoria": "compartilhado",
+      "quantidade": 7,
       "evento": [
         {
           "id": 5,
           "titulo": "Pensando4",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/role_db.jpg"
@@ -63,13 +63,13 @@
       "id": 5,
       "titulo": "Faculdade",
       "categoria": "individual",
+      "quantidade": 7,
       "evento": [
         {
           "id": 6,
           "titulo": "Pensando5",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/faculdade_db.jpg"
@@ -78,13 +78,13 @@
       "id": 6,
       "titulo": "Compras",
       "categoria": "individual",
+      "quantidade": 7,
       "evento": [
         {
           "id": 7,
           "titulo": "Pensando6",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/compras_db.jpg"
@@ -93,13 +93,13 @@
       "id": 7,
       "titulo": "Viagens",
       "categoria": "campatilhado",
+      "quantidade": 7,
       "evento": [
         {
           "id": 8,
           "titulo": "Pensando7",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/viagens_db.jpg"
@@ -108,13 +108,13 @@
       "id": 8,
       "titulo": "Pelada",
       "categoria": "campatilhado",
+      "quantidade": 7,
       "evento": [
         {
           "id": 9,
           "titulo": "Pensando8",
           "capa": "../images/grupos/pessoal_db.jpg",
-          "pessoas": 2,
-          "quantidade": 7
+          "pessoas": 2
         }
       ],
       "image": "../assets/images/grupos/pelada_db.jpg"

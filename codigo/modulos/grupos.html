@@ -8,24 +8,21 @@
   <title>Grupos</title>
   <link rel="stylesheet" href="../assets/css/global.css" />
   <link rel="stylesheet" href="../assets/css/grupos.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 </head>
 
 <body>
   <div class="container-fluid PaiDeTodos">
     <div class="row">
-
       <!-- Início Side bar Global -->
       <div class="col-md-2">
       </div>
 
       <aside class="col-md-2 menu-lateral">
-
         <div class="logo-menu">
           <img src="../assets/images/logos/Logo-Horizontal.png" alt="Logo vertical DivideUai!" />
         </div>
-
         <ul>
           <li class="item-menu">
             <a href="#">
@@ -52,14 +49,12 @@
             </a>
           </li>
         </ul>
-
       </aside>
       <!-- Fim Side bar Global -->
 
       <!-- Conteúdo da página -->
       <main class="col-md-10 container p-5 mt-3">
         <div class="headline">
-
           <h1>Seus grupos</h1>
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-add py-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -76,18 +71,21 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
               </div>
               <div class="modal-body">
-                <p>Imagem do grupo</p>
-                <input type="file" name="ImgGrupo" id="ImgGrupo">
-                <p>Título do grupo</p>
-                <input type="text" name="Titulo-do-grupo" id="titulo-grupo">
-                <p>Categoria</p>
-                <select name="CatGupo" id="CatGrupo">
-                  <option value="Pessoal">Pessoal</option>
-                  <option value="Gruop">Gupo</option>
-                </select>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Cadastrar grupo</button>
+                <form id="cardForm">
+                  <div class="mb-3">
+                    <label for="cardTitle" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="cardTitle" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cardEventos" class="form-label">Eventos</label>
+                    <input type="number" class="form-control" id="cardEventos" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cardImage" class="form-label">Imagem (URL)</label>
+                    <input type="text" class="form-control" id="cardImage" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Criar Grupo</button>
+                </form>
               </div>
             </div>
           </div>
