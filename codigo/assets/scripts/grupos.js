@@ -49,6 +49,8 @@ function excluirCard(cardId) {
   const updatedCards = cardsLocalStorage.filter((card) => card.id !== cardId);
   salvaDadosLocalStorage(updatedCards);
   exibeTodosGrupos();
+
+  console.log(excluirCard())
 }
 
 // Busca os dados do JSON
@@ -67,7 +69,6 @@ function exibeTodosGrupos() {
   });
 }
 
-// Seleciona o formulário e adiciona um evento de envio
 // Seleciona o formulário e adiciona um evento de envio
 const cardForm = document.getElementById("cardForm");
 cardForm.addEventListener("submit", (event) => {
