@@ -1,57 +1,109 @@
-// Array de cards
-let cards = [];
-
-// Seleciona o formulário e adiciona um evento de envio
-const cardForm = document.getElementById("cardForm");
-cardForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Previne o comportamento padrão de enviar o formulário
-
-  // Obtém os valores dos campos do formulário
-  const cardTitle = document.getElementById("cardTitle").value;
-  const cardDescription = document.getElementById("cardDescription").value;
-  const cardImage = document.getElementById("cardImage").value;
-
-  // Cria um novo objeto card
-  const newCard = {
-    id: cards.length + 1,
-    title: cardTitle,
-    description: cardDescription,
-    image: cardImage,
-  };
-
-  // Adiciona o novo card ao array de cards
-  cards.push(newCard);
-
-  // Limpa os campos do formulário
-  cardForm.reset();
-
-  // Atualiza a lista de cards
-  displayCards();
-});
-
-// Função para exibir os cards
-function displayCards() {
-  // Seleciona o container dos cards
-  const cardContainer = document.querySelector(".card-container");
-
-  // Limpa o container
-  cardContainer.innerHTML = "";
-
-  // Cria um card para cada objeto no array de cards
-  cards.forEach((card) => {
-    const cardElement = document.createElement("div");
-    cardElement.classList.add("card");
-    cardElement.innerHTML = `
-      <img src="${card.image}" class="card-img-top" alt="${card.title}">
-      <div class="card-body">
-        <h5 class="card-title">${card.title}</h5>
-        <p class="card-text">${card.description}</p>
+// Busca os dados no Local Storage
+function buscaDadosLocalStorage() {
+    const cardsLocalStorage = localStorage.getItem("db_cards");
+    return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
+  }
+  
+  // Salva os dados no Local Storage
+  function salvaDadosLocalStorage(cards) {
+    localStorage.setItem("db_cards", JSON.stringify(cards));
+  }
+  
+  // Monta os cards com os dados dos grupos
+  function exibeGruposNaTela(grupos) {
+    const cardsContainer = document.getElementById("listagem-grupos");
+    var textoHtml = "";
+  
+    for (i = 0; i < grupos.length; i++) {
+      const grupo = grupos[i];
+      textoHtml += `<div class="col-md-3 mb-3">
+      <div class="card h-100">
+          <img src="${grupo.image}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <div class="botoes headline">
+              <h5 class="card-title">${grupo.titulo}</h5>
+                  <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${grupo.id}" onclick="abreModalEdicao('${grupo.id}')"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-danger btn-sm" id="botaoExcluir"><i class="bi bi-trash"></i></button>
+              </div>
+              <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${grupo.quantidade} Eventos</h6>
+          </div>
       </div>
-      <div class="card-footer">
-        <button class="btn btn-primary" onclick="editCard(${card.id})">Editar</button>
-        <button class="btn btn-danger" onclick="deleteCard(${card.id})">Excluir</button>
-      </div>
-    `;
-    cardContainer.appendChild(cardElement);
+  </div>`;
+    }
+  
+    // Adiciona os cards ao container na tela
+    cardsContainer.innerHTML = textoHtml;
+  }
+  
+  // Busca os dados do JSON
+  function buscaDadosGrupos() {
+    return fetch("../assets/data/db_grupos.json").then(function (response) {
+      return response.json();
+    });
+  }
+  
+  /// Exibe os cards do Local Storage e do JSON na tela
+  function exibeTodosGrupos() {
+    buscaDadosGrupos().then(function (grupos) {
+      const cardsLocalStorage = buscaDadosLocalStorage();
+      const todosGrupos = [...grupos, ...cardsLocalStorage];
+      exibeGruposNaTela(todosGrupos);
+    });
+  }
+  
+  // Seleciona o formulário e adiciona um evento de envio
+  const cardForm = document.getElementById("cardForm");
+  cardForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+  
+    const cardTitle = document.getElementById("cardTitle").value;
+    const cardDescription = document.getElementById("cardEventos").value;
+    const cardImage = document.getElementById("cardImage").value;
+  
+    const cardId = document.getElementById("cardId").value;
+    let newCard;
+    if (cardId) {
+      const cardsLocalStorage = buscaDadosLocalStorage();
+      const cardIndex = cardsLocalStorage.findIndex((card) => card.id === cardId);
+      if (cardIndex !== -1) {
+        cardsLocalStorage[cardIndex].titulo = cardTitle;
+        cardsLocalStorage[cardIndex].quantidade = cardDescription;
+        cardsLocalStorage[cardIndex].image = cardImage;
+        salvaDadosLocalStorage(cardsLocalStorage);
+  
+        document.getElementById("cardId").value = "";
+      }
+    } else {
+       newCard = {
+        id: Math.random().toString(36).substr(2, 9),
+        titulo: cardTitle,
+        quantidade: cardDescription,
+        image: cardImage,
+      }
+    }
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    cardsLocalStorage.push(newCard);
+    salvaDadosLocalStorage(cardsLocalStorage);
+  
+    cardForm.reset(newCard);
+  
+    exibeTodosGrupos();
   });
-}
+  
+  function abreModalEdicao(cardId) {
+    const cardsLocalStorage = buscaDadosLocalStorage();
+  
+    const card = cardsLocalStorage.find((card) => card.id === cardId);
+  
+    document.getElementById("cardTitle").value = card.titulo;
+    document.getElementById("cardEventos").value = card.quantidade;
+    document.getElementById("cardImage").value = card.image;
+  
+    document.getElementById("cardId").value = cardId;
+  
+    const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+    modal.show();
+  }
+  
+  window.addEventListener("load", exibeTodosGrupos);
+  

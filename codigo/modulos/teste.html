@@ -1,47 +1,117 @@
-<!-- Modal -->
-<div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cardModalLabel">Novo card</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="cardForm">
-            <div class="mb-3">
-              <label for="cardTitle" class="form-label">Título</label>
-              <input type="text" class="form-control" id="cardTitle" required>
-            </div>
-            <div class="mb-3">
-              <label for="cardDescription" class="form-label">Descrição</label>
-              <textarea class="form-control" id="cardDescription" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="cardImage" class="form-label">Imagem (URL)</label>
-              <input type="text" class="form-control" id="cardImage" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Criar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+// Busca os dados no Local Storage
+function buscaDadosLocalStorage() {
+  const cardsLocalStorage = localStorage.getItem("db_cards");
+  return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
+}
 
-  <form id="cardForm">
-    <div class="modal-header d-flex ">
-      <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de grupo</h1>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
+// Salva os dados no Local Storage
+function salvaDadosLocalStorage(cards) {
+  localStorage.setItem("db_cards", JSON.stringify(cards));
+}
+
+// Monta os cards com os dados dos grupos
+function exibeGruposNaTela(grupos) {
+  const cardsContainer = document.getElementById("listagem-grupos");
+  var textoHtml = "";
+
+  for (i = 0; i < grupos.length; i++) {
+    const grupo = grupos[i];
+    textoHtml += `<div class="col-md-3 mb-3">
+    <div class="card h-100">
+        <img src="${grupo.image}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <div class="botoes headline">
+            <h5 class="card-title">${grupo.titulo}</h5>
+                <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${grupo.id}" onclick="abreModalEdicao('${grupo.id}')"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger btn-sm" id="botaoExcluir"><i class="bi bi-trash"></i></button>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${grupo.quantidade} Eventos</h6>
+        </div>
     </div>
-    <div class="modal-body">
-      <p>Imagem do grupo</p>
-      <input type="file" name="ImgGrupo" id="imgGrupo">
-      <p>Título do grupo</p>
-      <input type="text" name="Titulo-do-grupo" id="tituloGrupo" required>
-      <p>Quantidade de Eventos</p>
-      <input type="number" name="quantidade-grupos" id="qntGrupos" required>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-primary" id="btn-cadastro-grupo" value="Inserir">Cadastrar
-        grupo</button>
-    </div>
-  </form>
+</div>`;
+  }
+
+  // Adiciona os cards ao container na tela
+  cardsContainer.innerHTML = textoHtml;
+}
+
+// Busca os dados do JSON
+function buscaDadosGrupos() {
+  return fetch("../assets/data/db_grupos.json").then(function (response) {
+    return response.json();
+  });
+}
+
+/// Exibe os cards do Local Storage e do JSON na tela
+function exibeTodosGrupos() {
+  buscaDadosGrupos().then(function (grupos) {
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    const todosGrupos = [...grupos, ...cardsLocalStorage];
+    exibeGruposNaTela(todosGrupos);
+  });
+}
+
+// Seleciona o formulário e adiciona um evento de envio
+const cardForm = document.getElementById("cardForm");
+cardForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Obtém os valores dos campos do formulário
+  const cardTitle = document.getElementById("cardTitle").value;
+  const cardDescription = document.getElementById("cardEventos").value;
+  const cardImage = document.getElementById("cardImage").value;
+
+  const cardId = document.getElementById("cardId").value;
+  if (cardId) {
+    // Atualiza os dados do cartão existente
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    let newCard; // Declaração da variável newCard
+    const cardIndex = cardsLocalStorage.findIndex((card) => card.id === cardId);
+    if (cardIndex !== -1) {
+      cardsLocalStorage[cardIndex].titulo = cardTitle;
+      cardsLocalStorage[cardIndex].quantidade = cardDescription;
+      cardsLocalStorage[cardIndex].image = cardImage;
+      salvaDadosLocalStorage(cardsLocalStorage);
+
+      // Limpa o campo cardId
+      document.getElementById("cardId").value = "";
+    }
+  } else {
+    // Cria um novo objeto card
+     newCard = {
+      id: Math.random().toString(36).substr(2, 9),
+      titulo: cardTitle,
+      quantidade: cardDescription,
+      image: cardImage,
+    }
+  }
+  // Adiciona o novo card ao array de cards e salva no Local Storage
+  const cardsLocalStorage = buscaDadosLocalStorage();
+  cardsLocalStorage.push(newCard);
+  salvaDadosLocalStorage(cardsLocalStorage);
+
+  // Limpa os campos do formulário
+  cardForm.reset(newCard);
+
+  // Atualiza a lista de cards
+  exibeTodosGrupos();
+});
+
+function abreModalEdicao(cardId) {
+  // Busca os dados do Local Storage
+  const cardsLocalStorage = buscaDadosLocalStorage();
+
+  // Procura o card com o ID correspondente
+  const card = cardsLocalStorage.find((card) => card.id === cardId);
+
+  // Preenche o formulário com as informações do card
+  document.getElementById("cardTitle").value = card.titulo;
+  document.getElementById("cardEventos").value = card.quantidade;
+  document.getElementById("cardImage").value = card.image;
+
+  // Abre o modal
+  const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  modal.show();
+}
+
+window.addEventListener("load", exibeTodosGrupos);
