@@ -1,30 +1,85 @@
-function buscaGruposAPI() {
-  const cardsContainer = document.getElementById("listagem-grupos");
-
-  fetch("../assets/data/db_grupos.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (db) {
-      var textoHtml = "";
-      for (i = 0; i < db.length; i++) {
-        const grupo = db[i];
-        textoHtml += `<div class="col-md-3">
-        <div class="card h-100">
-        <div class="card-body">
-          <img src="${grupo.image}" class="card-img-top" alt="...">
-            <h5 class="card-title">${grupo.titulo}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-            <h6 class="card-subtitle mb-2 text-body-secondary">${grupo.evento.quantidade} Eventos</h6>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>`;
-      }
-
-      cardsContainer.innerHTML = textoHtml;
-    });
+// Busca os dados no Local Storage
+function buscaDadosLocalStorage() {
+  const cardsLocalStorage = localStorage.getItem("db_cards");
+  return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
 }
 
-window.addEventListener("load", buscaGruposAPI);
+// Salva os dados no Local Storage
+function salvaDadosLocalStorage(cards) {
+  localStorage.setItem("db_cards", JSON.stringify(cards));
+}
+
+ // Monta os cards com os dados dos grupos
+function exibeGruposNaTela(grupos) {
+  const cardsContainer = document.getElementById("listagem-grupos");
+  var textoHtml = "";
+
+  for (i = 0; i < grupos.length; i++) {
+    const grupo = grupos[i];
+    textoHtml += `<div class="col-md-3 mb-3">
+    <div class="card h-100">
+        <img src="${grupo.image}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${grupo.titulo}</h5>
+            <div class="botoes">
+                <button class="btn btn-primary btn-sm" id="botaoEditar"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger btn-sm" id="botaoExcluir"><i class="bi bi-trash"></i></button>
+            </div>
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${grupo.quantidade} Eventos</h6>
+        </div>
+    </div>
+</div>`;
+  }
+
+  // Adiciona os cards ao container na tela
+  cardsContainer.innerHTML = textoHtml;
+}
+
+// Busca os dados do JSON
+function buscaDadosGrupos() {
+  return fetch("../assets/data/db_grupos.json").then(function (response) {
+    return response.json();
+  });
+}
+
+
+/// Exibe os cards do Local Storage e do JSON na tela
+function exibeTodosGrupos() {
+  buscaDadosGrupos().then(function (grupos) {
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    const todosGrupos = [...grupos, ...cardsLocalStorage];
+    exibeGruposNaTela(todosGrupos);
+  });
+}
+
+// Seleciona o formulário e adiciona um evento de envio
+const cardForm = document.getElementById("cardForm");
+cardForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Obtém os valores dos campos do formulário
+  const cardTitle = document.getElementById("cardTitle").value;
+  const cardDescription = document.getElementById("cardEventos").value;
+  const cardImage = document.getElementById("cardImage").value;
+
+  // Cria um novo objeto card
+  const newCard = {
+    id: Math.random().toString(36).substr(2, 9),
+    titulo: cardTitle,
+    quantidade: cardDescription,
+    image: cardImage,
+  };
+
+  // Adiciona o novo card ao array de cards e salva no Local Storage
+  const cardsLocalStorage = buscaDadosLocalStorage();
+  cardsLocalStorage.push(newCard);
+  salvaDadosLocalStorage(cardsLocalStorage);
+
+  // Limpa os campos do formulário
+  cardForm.reset(newCard);
+
+  // Atualiza a lista de cards
+  exibeTodosGrupos();
+});
+
+window.addEventListener("load", exibeTodosGrupos);

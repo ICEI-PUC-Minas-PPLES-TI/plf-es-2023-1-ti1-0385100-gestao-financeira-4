@@ -1,0 +1,47 @@
+<!-- Modal -->
+<div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cardModalLabel">Novo card</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="cardForm">
+            <div class="mb-3">
+              <label for="cardTitle" class="form-label">Título</label>
+              <input type="text" class="form-control" id="cardTitle" required>
+            </div>
+            <div class="mb-3">
+              <label for="cardDescription" class="form-label">Descrição</label>
+              <textarea class="form-control" id="cardDescription" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="cardImage" class="form-label">Imagem (URL)</label>
+              <input type="text" class="form-control" id="cardImage" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Criar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="cardForm">
+    <div class="modal-header d-flex ">
+      <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de grupo</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
+    </div>
+    <div class="modal-body">
+      <p>Imagem do grupo</p>
+      <input type="file" name="ImgGrupo" id="imgGrupo">
+      <p>Título do grupo</p>
+      <input type="text" name="Titulo-do-grupo" id="tituloGrupo" required>
+      <p>Quantidade de Eventos</p>
+      <input type="number" name="quantidade-grupos" id="qntGrupos" required>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" id="btn-cadastro-grupo" value="Inserir">Cadastrar
+        grupo</button>
+    </div>
+  </form>
