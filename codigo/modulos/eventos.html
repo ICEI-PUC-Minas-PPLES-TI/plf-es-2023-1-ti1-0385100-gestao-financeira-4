@@ -67,33 +67,40 @@
           </button>
         </div>
 
-        <!-- Modal de criar grupos-->
+        <!-- Modal de criar eventos-->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header d-flex ">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Criar Gastos</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> X</button>
-                </div>
-                <div class="modal-body">
-                  <p>Imagem do grupo</p>
-                  <input type="file" name="ImgGrupo" id="ImgGrupo" style="margin-bottom: 3px;">
-                  <p>Título</p>
-                  <input type="text" name="Título" id="Título" maxlength="20">
-                  <p>Grupo</p>
-                  <input type="Grupo" name="Grupo" id="Grupo" maxlength="20">
-                  <p>Pessoas</p>
-                  <input type="text" name="Pessoas" id="Pessoas" maxlength="35">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Cadastrar gastos</button>
-                </div>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header d-flex ">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Evento</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                    class="bi bi-x"></i></button>
+              </div>
+              <div class="modal-body">
+                <form id="cardForm">
+                  <input type="hidden" id="cardId">
+                  <div class="mb-3">
+                    <label for="cardTitle" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="cardTitle" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cardEventos" class="form-label">Grupo</label>
+                    <input type="text" class="form-control" id="cardEventos" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cardImage" class="form-label">Imagem (URL)</label>
+                    <input type="text" class="form-control" id="cardImage" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100"
+                    style="background-color: #2ed47a; color: white; border: none;">Criar Evento</button>
+                </form>
               </div>
             </div>
           </div>
+        </div>
 
         <div>
-          <div id="listagem-grupos" class="row">
+          <div id="listagem-eventos" class="row">
             <!--Cards-->
           </div>
         </div>

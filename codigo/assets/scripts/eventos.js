@@ -1,31 +1,125 @@
-function buscaGruposAPI() {
-    const cardsContainer = document.getElementById("listagem-grupos");
-  
-    fetch("../assets/data/db_grupos.json")
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (db) {
-        var textoHtml = "";
-        for (i = 0; i < db.length; i++) {
-          const grupo = db[i];
-          textoHtml += `<div class="col-md-3">
-          <div class="card h-100">
-          <div class="card-body">
-            <img src="${grupo.image}" class="card-img-top" alt="...">
-              <h5 class="card-title">${grupo.titulo}</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-              <h6 class="card-subtitle mb-2 text-body-secondary">${grupo.evento.quantidade} Eventos</h6>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+// Busca os dados no Local Storage
+function buscaDadosLocalStorage() {
+  const cardsLocalStorage = localStorage.getItem("db_cards");
+  return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
+}
+
+// Salva os dados no Local Storage
+function salvaDadosLocalStorage(cards) {
+  localStorage.setItem("db_cards", JSON.stringify(cards));
+}
+
+// Monta os cards com os dados dos evento
+function exibeEventosNaTela(eventos) {
+  const cardsContainer = document.getElementById("listagem-eventos");
+  var textoHtml = "";
+
+  for (i = 0; i < eventos.length; i++) {
+    const evento = eventos[i];
+    textoHtml += `<div class="col-md-3 mb-3">
+    <div class="card h-100">
+        <img src="${evento.image}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <div class="botoes headline">
+            <h5 class="card-title">${evento.titulo}</h5>
+                <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${evento.id}" onclick="abreModalEdicao('${evento.id}')"><i class="bi bi-pencil-square"></i></button>
+                <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${evento.id}"><i class="bi bi-trash"></i></button>
             </div>
-          </div>
-        </div>`;
-        }
-  
-        cardsContainer.innerHTML = textoHtml;
-      });
+            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${evento.grupo}</h6>
+        </div>
+    </div>
+</div>`;
   }
-  
-  window.addEventListener("load", buscaGruposAPI);
-  
+
+  // Adiciona os cards ao container na tela
+  cardsContainer.innerHTML = textoHtml;
+
+  const botaoExcluirArray = document.getElementsByClassName("botaoExcluir");
+  for (let i = 0; i < botaoExcluirArray.length; i++) {
+    botaoExcluirArray[i].addEventListener("click", function (event) {
+      const cardId = event.target.getAttribute("data-card-id");
+      excluirCard(cardId);
+    });
+  }
+}
+
+// Função para excluir um card
+function excluirCard(cardId) {
+  const cardsLocalStorage = buscaDadosLocalStorage();
+  const updatedCards = cardsLocalStorage.filter((card) => card.id !== cardId);
+  salvaDadosLocalStorage(updatedCards);
+  exibeTodosEventos();
+}
+
+// Busca os dados do JSON
+function buscaDadosEventos() {
+  return fetch("../assets/data/eventos.json").then(function (response) {
+    return response.json();
+  });
+}
+
+/// Exibe os cards do Local Storage e do JSON na tela
+function exibeTodosEventos() {
+  buscaDadosEventos().then(function (eventos) {
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    const todosEventos = [...eventos, ...cardsLocalStorage];
+    exibeEventosNaTela(todosEventos);
+  });
+}
+
+// Seleciona o formulário e adiciona um evento de envio
+const cardForm = document.getElementById("cardForm");
+cardForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const cardTitle = document.getElementById("cardTitle").value;
+  const cardDescription = document.getElementById("cardEventos").value;
+  const cardImage = document.getElementById("cardImage").value;
+
+  const cardId = document.getElementById("cardId").value;
+
+  if (cardId) {
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    const cardIndex = cardsLocalStorage.findIndex((card) => card.id === cardId);
+    if (cardIndex !== -1) {
+      cardsLocalStorage[cardIndex].titulo = cardTitle;
+      cardsLocalStorage[cardIndex].grupo = cardDescription;
+      cardsLocalStorage[cardIndex].image = cardImage;
+      salvaDadosLocalStorage(cardsLocalStorage);
+
+      document.getElementById("cardId").value = "";
+    }
+  } else {
+    const newCard = {
+      id: Math.random().toString(36).substr(2, 9),
+      titulo: cardTitle,
+      grupo: cardDescription,
+      image: cardImage,
+    };
+
+    const cardsLocalStorage = buscaDadosLocalStorage();
+    cardsLocalStorage.push(newCard);
+    salvaDadosLocalStorage(cardsLocalStorage);
+
+    cardForm.reset();
+  }
+
+  exibeTodosEventos();
+});
+
+function abreModalEdicao(cardId) {
+  const cardsLocalStorage = buscaDadosLocalStorage();
+
+  const card = cardsLocalStorage.find((card) => card.id === cardId);
+
+  document.getElementById("cardTitle").value = card.titulo;
+  document.getElementById("cardEventos").value = card.quantidade;
+  document.getElementById("cardImage").value = card.image;
+
+  document.getElementById("cardId").value = cardId;
+
+  const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  modal.show();
+}
+
+window.addEventListener("load", exibeTodosEventos);
