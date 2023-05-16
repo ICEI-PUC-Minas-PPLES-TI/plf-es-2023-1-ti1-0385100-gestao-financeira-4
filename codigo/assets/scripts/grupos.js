@@ -12,35 +12,43 @@ function salvaDadosLocalStorage(cards) {
 // Monta os cards com os dados dos grupos
 function exibeGruposNaTela(grupos) {
   const cardsContainer = document.getElementById("listagem-grupos");
-  var textoHtml = "";
+  cardsContainer.innerHTML = ""; // Limpa o container de cards
 
   for (i = 0; i < grupos.length; i++) {
     const grupo = grupos[i];
-    textoHtml += `<div class="col-md-3 mb-3">
-    <div class="card h-100">
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("col-md-3", "mb-3");
+    cardElement.innerHTML = `
+      <div class="card h-100">
         <img src="${grupo.image}" class="card-img-top" alt="...">
         <div class="card-body">
-            <div class="botoes headline">
+          <div class="botoes headline">
             <h5 class="card-title">${grupo.titulo}</h5>
-                <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${grupo.id}" onclick="abreModalEdicao('${grupo.id}')"><i class="bi bi-pencil-square"></i></button>
-                <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${grupo.id}"><i class="bi bi-trash"></i></button>
-            </div>
-            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${grupo.quantidade} Eventos</h6>
+            <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${grupo.id}" onclick="abreModalEdicao('${grupo.id}')"><i class="bi bi-pencil-square"></i></button>
+            <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${grupo.id}"><i class="bi bi-trash"></i></button>
+          </div>
+          <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${grupo.quantidade} Eventos</h6>
         </div>
-    </div>
-</div>`;
+      </div>
+    `;
+
+    cardsContainer.appendChild(cardElement);
   }
+}
 
-  // Adiciona os cards ao container na tela
-  cardsContainer.innerHTML = textoHtml;
-
+// Função para adicionar os ouvintes de evento aos botões de exclusão
+function adicionarOuvintesExcluir() {
   const botaoExcluirArray = document.getElementsByClassName("botaoExcluir");
   for (let i = 0; i < botaoExcluirArray.length; i++) {
-    botaoExcluirArray[i].addEventListener("click", function (event) {
-      const cardId = event.target.getAttribute("data-card-id");
-      excluirCard(cardId);
-    });
+    const botaoExcluir = botaoExcluirArray[i];
+    botaoExcluir.addEventListener("click", handleExcluirCard);
   }
+}
+
+// Função de tratamento para exclusão de card
+function handleExcluirCard(event) {
+  const cardId = event.target.getAttribute("data-card-id");
+  excluirCard(cardId);
 }
 
 // Função para excluir um card
@@ -48,7 +56,12 @@ function excluirCard(cardId) {
   const cardsLocalStorage = buscaDadosLocalStorage();
   const updatedCards = cardsLocalStorage.filter((card) => card.id !== cardId);
   salvaDadosLocalStorage(updatedCards);
-  exibeTodosGrupos();
+
+  // Remove o card da tela imediatamente
+  const cardElement = document.querySelector(`[data-card-id="${cardId}"]`);
+  if (cardElement) {
+    cardElement.parentElement.parentElement.parentElement.remove();
+  }
 }
 
 // Busca os dados do JSON
@@ -64,6 +77,7 @@ function exibeTodosGrupos() {
     const cardsLocalStorage = buscaDadosLocalStorage();
     const todosGrupos = [...grupos, ...cardsLocalStorage];
     exibeGruposNaTela(todosGrupos);
+    adicionarOuvintesExcluir(); // Adiciona os ouvintes de evento aos botões de exclusão
   });
 }
 
