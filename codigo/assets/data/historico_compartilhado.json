@@ -1,0 +1,110 @@
+[
+    {
+      "id": 1,
+      "descricao": "Netflix",
+      "categoria": "Outros",
+      "valor": 100,
+      "data": "10/04/2023",
+      "grupo": "Amigos",
+      "responsaveis": 4
+    },
+    {
+        "id": 2,
+        "descricao": "Pelada",
+        "categoria": "Lazer",
+        "valor": 100,
+        "data": "11/04/2023",
+        "grupo": "Futebol",
+        "responsaveis": 5
+      },
+      {
+        "id": 3,
+        "descricao": "Churrasco Guto",
+        "categoria": "Rolê",
+        "valor": 90,
+        "data": "12/04/2023",
+        "grupo": "Lazer",
+        "responsaveis": 2
+      },
+      {
+        "id": 4,
+        "descricao": "Aniversário",
+        "categoria": "Rolê",
+        "valor": 80,
+        "data": "13/04/2023",
+        "grupo": "Amigos",
+        "responsaveis": 2
+      },
+      {
+        "id": 5,
+        "descricao": "Rodizío",
+        "categoria": "Rolê",
+        "valor": 15,
+        "data": "14/04/2023",
+        "grupo": "Lazer",
+        "responsaveis": 2
+      },
+      {
+        "id": 6,
+        "descricao": "Amigo Oculto",
+        "categoria": "Rolê",
+        "valor": 150,
+        "data": "15/04/2023",
+        "grupo": "Amigos",
+        "responsaveis": 2
+      },
+      {
+        "id": 7,
+        "descricao": "Uber",
+        "categoria": "Rolê",
+        "valor": 50,
+        "data": "16/04/2023",
+        "grupo": "Amigos",
+        "responsaveis": 2
+      },
+      {
+        "id": 8,
+        "descricao": "Fatura",
+        "categoria": "Outros",
+        "valor": 550,
+        "data": "17/04/2023",
+        "grupo": "Família",
+        "responsaveis": 3
+      },
+      {
+        "id": 9,
+        "descricao": "Natação",
+        "categoria": "Lazer",
+        "valor": 450,
+        "data": "18/04/2023",
+        "grupo": "Família",
+        "responsaveis": 2
+      },
+      {
+        "id": 10,
+        "descricao": "Emprestimo",
+        "categoria": "Outros",
+        "valor": 450,
+        "data": "19/04/2023",
+        "grupo": "Amigos",
+        "responsaveis": 2
+      },
+      {
+        "id": 11,
+        "descricao": "Show",
+        "categoria": "Rolê",
+        "valor": 250,
+        "data": "20/04/2023",
+        "grupo": "LAzer",
+        "responsaveis": 2
+      },
+      {
+        "id": 12,
+        "descricao": "Compras",
+        "categoria": "Lazer",
+        "valor": 350,
+        "data": "21/04/2023",
+        "grupo": "Família",
+        "responsaveis": 2
+      }
+]
