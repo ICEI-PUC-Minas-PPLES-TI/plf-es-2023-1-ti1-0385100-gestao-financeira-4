@@ -1,0 +1,14 @@
+.container-fluid .col-md-10 button {
+  background-color: #ffb946;
+  color: white;
+}
+
+.container-fluid .col-md-10 table thead {
+  background-color: #2ed47a;
+  color: white;
+  text-align: center;
+}
+
+.container-fluid .col-md-10 table tbody {
+  text-align: center;
+}

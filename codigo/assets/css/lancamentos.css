@@ -26,4 +26,36 @@
     font-size: 15px;
   }
   
+  .valor-laranja {
+    color: rgb(255, 68, 0);
+  }
+  
+  .categoria-azul {
+      color: rgb(0, 98, 255);
+      width: 1px;
+      height: 30px;
+      text-align: center;
+  }
+  
+  .categoria-amarelo {
+      color: rgb(175, 171, 47);
+      width: 1px;
+      height: 30px;
+      text-align: center;
+  }
+  
+  .categoria-roxo {
+      color: rgb(161, 100, 199);
+      width: 1px;
+      height: 30px;
+      text-align: center;
+  }
+  
+  .categoria-verde {
+      color: rgb(46, 147, 21);
+      width: 1px;
+      height: 30px;
+      text-align: center;
+  }
+  
   

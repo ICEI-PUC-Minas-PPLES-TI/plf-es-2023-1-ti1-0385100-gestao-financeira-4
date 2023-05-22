@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "titulo": "Gennaro",
+    "categoria": "individual",
+    "grupo": "Família",
+    "evento": [
+      {
+        "id": 2,
+        "titulo": "Pensando1",
+        "capa": "https://bhdetalhes.com/wp-content/uploads/2018/11/gennaro-mesas.jpg",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://bhdetalhes.com/wp-content/uploads/2018/11/gennaro-mesas.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Chalé",
+    "categoria": "compartilhado",
+    "grupo": "Pessoal",
+    "evento": [
+      {
+        "id": 3,
+        "titulo": "Pensando2",
+        "capa": "https://bhaz.com.br/wp-content/uploads/2017/04/Chalezinho1.jpg",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://bhaz.com.br/wp-content/uploads/2017/04/Chalezinho1.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Major",
+    "categoria": "compartilhado",
+    "grupo": "Faculdade",
+    "evento": [
+      {
+        "id": 4,
+        "titulo": "Pensando3",
+        "capa": "https://instaload.net/pt/wp-content/uploads/2023/02/major-lock-1.jpg",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://instaload.net/pt/wp-content/uploads/2023/02/major-lock-1.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Vitrine",
+    "categoria": "compartilhado",
+    "grupo": "Rolês",
+    "evento": [
+      {
+        "id": 5,
+        "titulo": "Pensando4",
+        "capa": "https://ogimg.infoglobo.com.br/in/22812989-49a-96f/FT1086A/INFOCHPDPICT000077311322.jpg",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://ogimg.infoglobo.com.br/in/22812989-49a-96f/FT1086A/INFOCHPDPICT000077311322.jpg"
+  },
+  {
+    "id": 5,
+    "titulo": "Mahal",
+    "categoria": "individual",
+    "grupo": "Amigos",
+    "evento": [
+      {
+        "id": 6,
+        "titulo": "Pensando5",
+        "capa": "https://static.wixstatic.com/media/eeb004_fc2c9288ca924b7db30bc38dc98b7082~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/eeb004_fc2c9288ca924b7db30bc38dc98b7082~mv2.jpg",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://static.wixstatic.com/media/eeb004_fc2c9288ca924b7db30bc38dc98b7082~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/eeb004_fc2c9288ca924b7db30bc38dc98b7082~mv2.jpg"
+  },
+  {
+    "id": 6,
+    "titulo": "Layback",
+    "categoria": "individual",
+    "grupo": "Rolês",
+    "evento": [
+      {
+        "id": 7,
+        "titulo": "Pensando6",
+        "capa": "https://soubh.uai.com.br/uploads/post/image/10958/main_destaque.jpg",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://soubh.uai.com.br/uploads/post/image/10958/main_destaque.jpg"
+  },
+  {
+    "id": 7,
+    "titulo": "Outback",
+    "categoria": "compartilhado",
+    "grupo": "Namorada",
+    "evento": [
+      {
+        "id": 8,
+        "titulo": "Pensando7",
+        "capa": "https://www.hojeemdia.com.br/image/policy:1.912471.1659026574:1659026574/image.jpg?w=1280&",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://www.hojeemdia.com.br/image/policy:1.912471.1659026574:1659026574/image.jpg?w=1280&"
+  },
+  {
+    "id": 8,
+    "titulo": "Churrasco",
+    "categoria": "compartilhado",
+    "grupo": "Família & Amigos",
+    "evento": [
+      {
+        "id": 9,
+        "titulo": "Pensando8",
+        "capa": "https://img.band.uol.com.br/image/2023/04/24/churrasco-12750_800x450.webp",
+        "pessoas": 2
+      }
+    ],
+    "image": "https://img.band.uol.com.br/image/2023/04/24/churrasco-12750_800x450.webp"
+  }
+]
