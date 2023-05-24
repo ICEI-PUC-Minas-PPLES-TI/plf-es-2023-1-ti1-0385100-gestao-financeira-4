@@ -41,7 +41,6 @@ function exibeHistoricoNaTela(historicos) {
   }
 }
 
-// Define os elementos do menu dropdown
 const dropdownItemIndividual = document.getElementById("tabela-individual");
 const dropdownItemCompartilhado = document.getElementById("tabela-compartilhado");
 
