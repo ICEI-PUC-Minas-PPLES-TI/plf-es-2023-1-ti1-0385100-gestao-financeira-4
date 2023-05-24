@@ -1,15 +1,12 @@
-// Busca os dados no Local Storage
 function buscaDadosLocalStorage() {
   const cardsLocalStorage = localStorage.getItem("db_cards");
   return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
 }
 
-// Salva os dados no Local Storage
 function salvaDadosLocalStorage(cards) {
   localStorage.setItem("db_cards", JSON.stringify(cards));
 }
 
-// Monta os cards com os dados dos grupos
 function exibeGruposNaTela(grupos) {
   const cardsContainer = document.getElementById("listagem-grupos");
   cardsContainer.innerHTML = ""; // Limpa o container de cards
@@ -36,7 +33,6 @@ function exibeGruposNaTela(grupos) {
   }
 }
 
-// Função para adicionar os ouvintes de evento aos botões de exclusão
 function adicionarOuvintesExcluir() {
   const botaoExcluirArray = document.getElementsByClassName("botaoExcluir");
   for (let i = 0; i < botaoExcluirArray.length; i++) {
@@ -45,43 +41,37 @@ function adicionarOuvintesExcluir() {
   }
 }
 
-// Função de tratamento para exclusão de card
 function handleExcluirCard(event) {
   const cardId = event.target.getAttribute("data-card-id");
   excluirCard(cardId);
 }
 
-// Função para excluir um card
 function excluirCard(cardId) {
   const cardsLocalStorage = buscaDadosLocalStorage();
   const updatedCards = cardsLocalStorage.filter((card) => card.id !== cardId);
   salvaDadosLocalStorage(updatedCards);
 
-  // Remove o card da tela imediatamente
   const cardElement = document.querySelector(`[data-card-id="${cardId}"]`);
   if (cardElement) {
     cardElement.parentElement.parentElement.parentElement.remove();
   }
 }
 
-// Busca os dados do JSON
 function buscaDadosGrupos() {
   return fetch("../assets/data/db_grupos.json").then(function (response) {
     return response.json();
   });
 }
 
-/// Exibe os cards do Local Storage e do JSON na tela
 function exibeTodosGrupos() {
   buscaDadosGrupos().then(function (grupos) {
     const cardsLocalStorage = buscaDadosLocalStorage();
     const todosGrupos = [...grupos, ...cardsLocalStorage];
     exibeGruposNaTela(todosGrupos);
-    adicionarOuvintesExcluir(); // Adiciona os ouvintes de evento aos botões de exclusão
+    adicionarOuvintesExcluir();
   });
 }
 
-// Seleciona o formulário e adiciona um evento de envio
 const cardForm = document.getElementById("cardForm");
 cardForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -136,12 +126,9 @@ function abreModalEdicao(cardId) {
   modal.show();
 }
 
-/* Bloqueia números no input*/
 const BloqueiaNumero = document.getElementById("cardImage");
 BloqueiaNumero.addEventListener("keydown", function(event) {
-  // Verifica se a tecla pressionada é um número
   if (event.key >= 0 && event.key <= 9) {
-    // Cancela a ação padrão do evento
     event.preventDefault();
     alert("Esse não é um campo para números. Adicione a URL da imagem");
   }
