@@ -1,11 +1,27 @@
-{
+[
+  {
     "Descrição": "rolê",
     "Categoria": "bebida",
-    "Valor": "25,00",
-    "Data": "12/05",
+    "Valor": 25.00,
+    "Data": "12/05/2023",
     "Grupo": "amigos",
-    "Responsaveis": "renan,julio,mateus"
+    "Responsaveis": [
+      "renan",
+      "julio",
+      "mateus"]
+  },
+  {
+    "Descrição": "Balada",
+    "Categoria": "role",
+    "Valor": 100.00,
+    "Data": "12/05/2023",
+    "Grupo": "amigos",
+    "Responsaveis": [
+      "renan",
+      "julio"
+    ]
   }
+]
   
 
   
