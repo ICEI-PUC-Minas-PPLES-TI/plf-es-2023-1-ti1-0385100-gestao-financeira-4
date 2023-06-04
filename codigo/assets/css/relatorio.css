@@ -1,0 +1,44 @@
+.PaiDeTodos {
+    height: 100vh;
+}
+
+main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 8em;
+}
+
+#tela {
+    width: 30em;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.resultado {
+    background-color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em 2.5em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+}
+
+.resultado p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.resultado span {
+    color: var(--color-green);
+    font-weight: 600;
+    font-size: 1.5em;
+}
+

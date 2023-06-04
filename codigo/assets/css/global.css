@@ -28,8 +28,12 @@
 
 body {
   height: 100vh;
+  background-color: var(--table-ice) !important;
 }
 
+.borda {
+  border: 1px solid red;
+}
 
 /* Ínicio Side bar Menu*/
 aside.menu-lateral {

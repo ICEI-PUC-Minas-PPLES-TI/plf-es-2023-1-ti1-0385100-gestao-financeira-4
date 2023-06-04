@@ -1,17 +1,17 @@
 [
   {
-    "Descrição": "rolê",
+    "Descricao": "Rolê",
     "Categoria": "bebida",
-    "Valor": 25.00,
+    "Valor": 30.00,
     "Data": "12/05/2023",
     "Grupo": "amigos",
     "Responsaveis": [
-      "renan",
+      "renan", 
       "julio",
-      "mateus"]
+      "maria"]
   },
   {
-    "Descrição": "Balada",
+    "Descricao": "Balada",
     "Categoria": "role",
     "Valor": 100.00,
     "Data": "12/05/2023",
@@ -20,8 +20,15 @@
       "renan",
       "julio"
     ]
+  },
+  {
+    "Descricao": "Futebol",
+    "Categoria": "lazer",
+    "Valor": 20.00,
+    "Data": "12/05/2023",
+    "Grupo": "amigos",
+    "Responsaveis": [
+      "renan"
+    ]
   }
 ]
-  
-
-  
