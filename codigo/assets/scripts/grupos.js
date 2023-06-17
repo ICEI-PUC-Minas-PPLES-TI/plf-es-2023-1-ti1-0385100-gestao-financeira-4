@@ -17,7 +17,7 @@ function exibeGruposNaTela(grupos) {
     cardElement.classList.add("col-md-3", "mb-3");
     cardElement.innerHTML = `
       <div class="card h-100">
-        <img src="${grupo.image}" class="card-img-top" alt="...">
+        <img src="${grupo.image}" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
         <div class="card-body">
           <div class="botoes headline">
             <h5 class="card-title">${grupo.titulo}</h5>
@@ -127,7 +127,7 @@ function abreModalEdicao(cardId) {
 }
 
 const BloqueiaNumero = document.getElementById("cardImage");
-BloqueiaNumero.addEventListener("keydown", function(event) {
+BloqueiaNumero.addEventListener("keydown", function (event) {
   if (event.key >= 0 && event.key <= 9) {
     event.preventDefault();
     alert("Esse não é um campo para números. Adicione a URL da imagem");
