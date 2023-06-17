@@ -1,15 +1,12 @@
-// Busca os dados no Local Storage
 function buscaDadosLocalStorage() {
   const cardsLocalStorage = localStorage.getItem("db_cards");
   return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
 }
 
-// Salva os dados no Local Storage
 function salvaDadosLocalStorage(cards) {
   localStorage.setItem("db_cards", JSON.stringify(cards));
 }
 
-// Monta os cards com os dados dos evento
 function exibeEventosNaTela(eventos) {
   const cardsContainer = document.getElementById("listagem-eventos");
   var textoHtml = "";
@@ -17,63 +14,74 @@ function exibeEventosNaTela(eventos) {
   for (i = 0; i < eventos.length; i++) {
     const evento = eventos[i];
     textoHtml += `<div class="col-md-3 mb-3">
-    <div class="card h-100">
-        <img src="${evento.image}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <div class="botoes headline">
-            <h5 class="card-title">${evento.titulo}</h5>
-                <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${evento.id}" onclick="abreModalEdicao('${evento.id}')"><i class="bi bi-pencil-square"></i></button>
-                <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${evento.id}"><i class="bi bi-trash"></i></button>
-            </div>
-            <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${evento.grupo}</h6>
-        </div>
-    </div>
-</div>`;
+      <div class="card h-100">
+          <img src="${evento.image}" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;" onclick="redirecionarEvento('${evento.id}')">
+          <div class="card-body">
+              <div class="botoes d-flex justify-content-between align-items-center">
+              <h5 class="card-title" style="color: #2ed47a">${evento.titulo}</h5>
+              <div>
+                  <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${evento.id}" onclick="abreModalEdicao('${evento.id}')"><i class="bi bi-pencil-square"></i></button>
+                  <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${evento.id}"><i class="bi bi-trash"></i></button>
+              </div>
+              </div>
+              <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${evento.grupo}</h6>
+          </div>
+      </div>
+  </div>`;
   }
 
-  // Adiciona os cards ao container na tela
   cardsContainer.innerHTML = textoHtml;
+}
 
+function redirecionarEvento(cardId) {
+  window.location.href = "/../codigo/modulos/lancamentos.html";
+}
+
+function adicionarOuvintesExcluir() {
   const botaoExcluirArray = document.getElementsByClassName("botaoExcluir");
   for (let i = 0; i < botaoExcluirArray.length; i++) {
-    botaoExcluirArray[i].addEventListener("click", function (event) {
-      const cardId = event.target.getAttribute("data-card-id");
-      excluirCard(cardId);
-    });
+    const botaoExcluir = botaoExcluirArray[i];
+    botaoExcluir.addEventListener("click", handleExcluirCard);
   }
 }
 
-// Função para excluir um card
+function handleExcluirCard(event) {
+  const cardId = event.target.getAttribute("data-card-id");
+  excluirCard(cardId);
+}
+
 function excluirCard(cardId) {
   const cardsLocalStorage = buscaDadosLocalStorage();
   const updatedCards = cardsLocalStorage.filter((card) => card.id !== cardId);
   salvaDadosLocalStorage(updatedCards);
-  exibeTodosEventos();
+
+  const cardElement = document.querySelector(`[data-card-id="${cardId}"]`);
+  if (cardElement) {
+    cardElement.parentElement.parentElement.parentElement.parentElement.remove();
+  }
 }
 
-// Busca os dados do JSON
 function buscaDadosEventos() {
   return fetch("../assets/data/eventos.json").then(function (response) {
     return response.json();
   });
 }
 
-/// Exibe os cards do Local Storage e do JSON na tela
 function exibeTodosEventos() {
-  buscaDadosEventos().then(function (eventos) {
+  buscaDadosEventos().then(function (grupos) {
     const cardsLocalStorage = buscaDadosLocalStorage();
-    const todosEventos = [...eventos, ...cardsLocalStorage];
-    exibeEventosNaTela(todosEventos);
+    const todosGrupos = [...grupos, ...cardsLocalStorage];
+    exibeEventosNaTela(todosGrupos);
+    adicionarOuvintesExcluir();
   });
 }
 
-// Seleciona o formulário e adiciona um evento de envio
 const cardForm = document.getElementById("cardForm");
 cardForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const cardTitle = document.getElementById("cardTitle").value;
-  const cardDescription = document.getElementById("cardEventos").value;
+  const cardGrupos = document.getElementById("cardGrupos").value;
   const cardImage = document.getElementById("cardImage").value;
 
   const cardId = document.getElementById("cardId").value;
@@ -83,7 +91,7 @@ cardForm.addEventListener("submit", (event) => {
     const cardIndex = cardsLocalStorage.findIndex((card) => card.id === cardId);
     if (cardIndex !== -1) {
       cardsLocalStorage[cardIndex].titulo = cardTitle;
-      cardsLocalStorage[cardIndex].grupo = cardDescription;
+      cardsLocalStorage[cardIndex].grupo = cardGrupos;
       cardsLocalStorage[cardIndex].image = cardImage;
       salvaDadosLocalStorage(cardsLocalStorage);
 
@@ -93,7 +101,7 @@ cardForm.addEventListener("submit", (event) => {
     const newCard = {
       id: Math.random().toString(36).substr(2, 9),
       titulo: cardTitle,
-      grupo: cardDescription,
+      grupo: cardGrupos,
       image: cardImage,
     };
 
@@ -113,7 +121,7 @@ function abreModalEdicao(cardId) {
   const card = cardsLocalStorage.find((card) => card.id === cardId);
 
   document.getElementById("cardTitle").value = card.titulo;
-  document.getElementById("cardEventos").value = card.quantidade;
+  document.getElementById("cardGrupos").value = card.grupo;
   document.getElementById("cardImage").value = card.image;
 
   document.getElementById("cardId").value = cardId;
@@ -121,5 +129,13 @@ function abreModalEdicao(cardId) {
   const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
   modal.show();
 }
+
+const BloqueiaNumero = document.getElementById("cardImage");
+BloqueiaNumero.addEventListener("keydown", function (event) {
+  if (event.key >= 0 && event.key <= 9) {
+    event.preventDefault();
+    alert("Esse não é um campo para números. Adicione a URL da imagem");
+  }
+});
 
 window.addEventListener("load", exibeTodosEventos);
