@@ -1,94 +1,102 @@
-// Função para salvar os dados no JSON e atualizar a tabela e o gráfico
-function salvarDados() {
-    // Função para adicionar um lançamento à tabela
-function adicionarLancamentoATabela(lancamento) {
-  var tabela = document.getElementById("tabela-lancamentos");
-  var linha = document.createElement("tr");
-
-  var colunaDescricao = document.createElement("td");
-  colunaDescricao.textContent = lancamento.descricao;
-  linha.appendChild(colunaDescricao);
-
-  var colunaCategoria = document.createElement("td");
-  colunaCategoria.textContent = lancamento.categoria;
-  linha.appendChild(colunaCategoria);
-
-  var colunaValor = document.createElement("td");
-  colunaValor.textContent = lancamento.valor;
-  linha.appendChild(colunaValor);
-
-  var colunaData = document.createElement("td");
-  colunaData.textContent = lancamento.data;
-  linha.appendChild(colunaData);
-
-  var colunaGrupo = document.createElement("td");
-  colunaGrupo.textContent = lancamento.grupo;
-  linha.appendChild(colunaGrupo);
-
-  var colunaResponsaveis = document.createElement("td");
-  colunaResponsaveis.textContent = lancamento.responsaveis;
-  linha.appendChild(colunaResponsaveis);
-
-  tabela.appendChild(linha);
+function gerarCorAleatoria() {
+  const letrasHex = "0123456789ABCDEF";
+  let cor = "#";
+  for (let i = 0; i < 6; i++) {
+    cor += letrasHex[Math.floor(Math.random() * 16)];
+  }
+  return cor;
 }
 
-    // Obter os valores inseridos pelo usuário
-    var descricao = document.getElementById("Descrição").value;
-    var categoria = document.getElementById("Categoria").value;
-    var valor = document.getElementById("Valor").value;
-    var data = document.getElementById("Data").value;
-    var grupo = document.getElementById("Grupo").value;
-    var responsaveis = document.getElementById("Responsaveis").value;
-  
-    // Criar um objeto com os dados
-    var novoLancamento = {
-      "descricao": descricao,
-      "categoria": categoria,
-      "valor": valor,
-      "data": data,
-      "grupo": grupo,
-      "responsaveis": responsaveis
-    };
-  
-    // Adicionar o novo lançamento à tabela
-    adicionarLancamentoATabela(novoLancamento);
-  
-    // Adicionar o novo lançamento ao gráfico
-    adicionarLancamentoAoGrafico(novoLancamento);
-  
-    // Limpar os campos de entrada
-    limparCamposDeEntrada();
+function aplicarCoresAleatorias() {
+  const spans = document.getElementsByClassName("cor-aleatoria");
+  for (let i = 0; i < spans.length; i++) {
+    const span = spans[i];
+    const cor = gerarCorAleatoria();
+    span.style.backgroundColor = cor;
   }
-  
-  // Função para adicionar um lançamento à tabela
-  function adicionarLancamentoATabela(lancamento) {
-    var tabela = document.querySelector("table tbody");
-    var linha = document.createElement("tr");
-  
-    linha.innerHTML = `
+}
+
+function exibeLancamentoNaTela(lancamentos) {
+  const tabelaBody = document.getElementById("tabela-body");
+  tabelaBody.innerHTML = "";
+
+  const lancamentosArmazenados =
+    JSON.parse(localStorage.getItem("lancamentos")) || [];
+
+  const todosLancamentos = [...lancamentos, ...lancamentosArmazenados];
+
+  for (let i = 0; i < todosLancamentos.length; i++) {
+    const lancamento = todosLancamentos[i];
+    const row = document.createElement("tr");
+    const corSpan = gerarCorAleatoria();
+    const corLinha = i % 2 === 1 ? "#ECECEC" : "#FFFFFF";
+    row.innerHTML = `
       <td>${lancamento.descricao}</td>
-      <td>${lancamento.categoria}</td>
-      <td>${lancamento.valor}</td>
+      <td><span style="display: inline-block; padding: 1px 10px; background-color: ${corSpan}; border-radius: 12px; color: white;">${lancamento.categoria}</span></td>
+      <td>R$${lancamento.valor}</td>
       <td>${lancamento.data}</td>
       <td>${lancamento.grupo}</td>
       <td>${lancamento.responsaveis}</td>
     `;
-  
-    tabela.appendChild(linha);
+    row.style.backgroundColor = corLinha;
+
+    tabelaBody.appendChild(row);
   }
-  
-  // Função para adicionar um lançamento ao gráfico
-  function adicionarLancamentoAoGrafico(lancamento) {
-    // Seu código para atualizar o gráfico com o novo lançamento
-  }
-  
-  // Função para limpar os campos de entrada após salvar os dados
-  function limparCamposDeEntrada() {
-    document.getElementById("Descrição").value = "";
-    document.getElementById("Categoria").value = "";
-    document.getElementById("Valor").value = "";
-    document.getElementById("Data").value = "";
-    document.getElementById("Grupo").value = "";
-    document.getElementById("Responsaveis").value = "";
-  }
-  
+}
+
+function adicionarLancamento(event) {
+  event.preventDefault();
+
+  const descricao = document.getElementById("colunaDescricao").value;
+  const categoria = document.getElementById("colunaCategoria").value;
+  const valor = document.getElementById("colunaValor").value;
+  const data = document.getElementById("colunaData").value;
+  const grupo = document.getElementById("colunaGrupo").value;
+  const responsaveis = document.getElementById("colunaResponsaveis").value;
+
+  const lancamento = {
+    descricao,
+    categoria,
+    valor,
+    data,
+    grupo,
+    responsaveis,
+  };
+
+  const lancamentos = JSON.parse(localStorage.getItem("lancamentos")) || [];
+  lancamentos.push(lancamento);
+  localStorage.setItem("lancamentos", JSON.stringify(lancamentos));
+
+  adicionarLancamentoNaTela(lancamento);
+
+  document.getElementById("cardForm").reset();
+
+  exibeLancamentoNaTela(lancamentos);
+}
+
+function buscaDadosTabela(url) {
+  return fetch(url).then(function (response) {
+    return response.json();
+  });
+}
+
+function exibeLinhasTabela() {
+  const url = "../assets/data/lancamentos.json";
+  buscaDadosTabela(url).then(function (lancamentos) {
+    exibeLancamentoNaTela(lancamentos);
+  });
+}
+
+window.addEventListener("load", exibeLinhasTabela);
+
+const form = document.getElementById("cardForm");
+form.addEventListener("submit", function (event) {
+  adicionarLancamento(event);
+  exibeLancamentoNaTela(JSON.parse(localStorage.getItem("lancamentos")) || []);
+});
+
+document
+  .getElementById("calculoFinalButton")
+  .addEventListener("click", function () {
+    window.location.href = "relatorio.html";
+  });

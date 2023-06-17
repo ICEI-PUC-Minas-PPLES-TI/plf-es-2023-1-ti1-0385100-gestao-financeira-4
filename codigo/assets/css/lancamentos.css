@@ -1,61 +1,69 @@
-
 .btn-add1 {
-    color: #fff;
-    background-color: #9a10cb;
-    font-size: 30px !important;
-    font-weight: bold !important;
-    height: 50px;
-  }
- 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-  }
-  
-  thead {
-    background-color: #2ed47a;
-    font-size: 20px;
-  }
-  
-  tbody {
-    font-size: 15px;
-  }
-  
-  .valor-laranja {
-    color: rgb(255, 68, 0);
-  }
-  
-  .categoria-azul {
-      color: rgb(0, 98, 255);
-      width: 1px;
-      height: 30px;
-      text-align: center;
-  }
-  
-  .categoria-amarelo {
-      color: rgb(175, 171, 47);
-      width: 1px;
-      height: 30px;
-      text-align: center;
-  }
-  
-  .categoria-roxo {
-      color: rgb(161, 100, 199);
-      width: 1px;
-      height: 30px;
-      text-align: center;
-  }
-  
-  .categoria-verde {
-      color: rgb(46, 147, 21);
-      width: 1px;
-      height: 30px;
-      text-align: center;
-  }
-  
-  
+  color: #fff;
+  background-color: #9a10cb;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  height: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+thead {
+  background-color: #2ed47a;
+  font-size: 20px;
+}
+
+tbody {
+  font-size: 15px;
+}
+
+.valor-laranja {
+  color: rgb(255, 68, 0);
+}
+
+.categoria-azul {
+  color: rgb(0, 98, 255);
+  width: 1px;
+  height: 30px;
+  text-align: center;
+}
+
+.categoria-amarelo {
+  color: rgb(175, 171, 47);
+  width: 1px;
+  height: 30px;
+  text-align: center;
+}
+
+.categoria-roxo {
+  color: rgb(161, 100, 199);
+  width: 1px;
+  height: 30px;
+  text-align: center;
+}
+
+.categoria-verde {
+  color: rgb(46, 147, 21);
+  width: 1px;
+  height: 30px;
+  text-align: center;
+}
+
+.container-fluid .col-md-10 table thead {
+  background-color: #2ed47a;
+  color: white;
+  text-align: center;
+}
+
+.container-fluid .col-md-10 table tbody {
+  text-align: center;
+}

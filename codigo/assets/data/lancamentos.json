@@ -1,34 +1,110 @@
 [
   {
-    "Descricao": "Rolê",
-    "Categoria": "bebida",
-    "Valor": 30.00,
-    "Data": "12/05/2023",
-    "Grupo": "amigos",
-    "Responsaveis": [
-      "renan", 
-      "julio",
-      "maria"]
+    "id": 1,
+    "descricao": "Rolê",
+    "categoria": "Ingressos",
+    "valor": 120,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Arthur", "Erica", "Sthel", "Pedro"]
   },
   {
-    "Descricao": "Balada",
-    "Categoria": "role",
-    "Valor": 100.00,
-    "Data": "12/05/2023",
-    "Grupo": "amigos",
-    "Responsaveis": [
-      "renan",
-      "julio"
-    ]
+    "id": 2,
+    "descricao": "Pestiscos",
+    "categoria": "Comida",
+    "valor": 70,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Arthur", "Erica", "Sthel", "Pedro"]
   },
   {
-    "Descricao": "Futebol",
-    "Categoria": "lazer",
-    "Valor": 20.00,
-    "Data": "12/05/2023",
-    "Grupo": "amigos",
-    "Responsaveis": [
-      "renan"
-    ]
+    "id": 3,
+    "descricao": "Drinks",
+    "categoria": "Bebidas",
+    "valor": 60,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Erica"]
+  },
+  {
+    "id": 4,
+    "descricao": "Água",
+    "categoria": "Bebidas",
+    "valor": 3,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Arthur"]
+  },
+  {
+    "id": 5,
+    "descricao": "Chopes",
+    "categoria": "Bebidas",
+    "valor": 150,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Erica", "Sthel", "Pedro"]
+  },
+  {
+    "id": 6,
+    "descricao": "Shot",
+    "categoria": "Bebidas",
+    "valor": 45,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Erica", "Sthel", "Pedro"]
+  },
+  {
+    "id": 7,
+    "descricao": "Agua",
+    "categoria": "Bebidas",
+    "valor": 3,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Erica"]
+  },
+  {
+    "id": 8,
+    "descricao": "Porção",
+    "categoria": "Comida",
+    "valor": 120,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Arthur", "Erica", "Sthel", "Pedro"]
+  },
+  {
+    "id": 9,
+    "descricao": "Couvert",
+    "categoria": "Música",
+    "valor": 28,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Arthur", "Erica", "Sthel", "Pedro"]
+  },
+  {
+    "id": 10,
+    "descricao": "Saidera",
+    "categoria": "Bebidas",
+    "valor": 45,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Erica", "Sthel", "Pedro"]
+  },
+  {
+    "id": 11,
+    "descricao": "Suco",
+    "categoria": "Bebidas",
+    "valor": 15,
+    "data": "17/06/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Arthur"]
+  },
+  {
+    "id": 12,
+    "descricao": "Água",
+    "categoria": "Bebidas",
+    "valor": 9,
+    "data": "21/04/2023",
+    "grupo": "Amigos",
+    "responsaveis": ["Sthel", "Pedro"]
   }
 ]
