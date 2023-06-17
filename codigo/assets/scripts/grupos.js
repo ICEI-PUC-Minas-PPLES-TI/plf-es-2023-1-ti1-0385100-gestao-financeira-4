@@ -36,7 +36,7 @@ function exibeGruposNaTela(grupos) {
 }
 
 function redirecionarEvento(cardId) {
-  window.location.href = `/../codigo/modulos/eventos.html/${cardId}`;
+  window.location.href = "/../codigo/modulos/eventos.html";
 }
 
 function adicionarOuvintesExcluir() {
