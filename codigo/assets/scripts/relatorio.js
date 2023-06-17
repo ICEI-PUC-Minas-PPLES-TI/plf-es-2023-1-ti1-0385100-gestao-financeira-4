@@ -1,21 +1,3 @@
-/*
-fetch('../assets/data/lancamentos.json')
-  .then(response => response.json()) // Converte a resposta em JSON
-  .then(data => {
-    // O JSON foi obtido com sucesso, e agora você pode percorrer o array de objetos
-    data.forEach(Valor => {
-
-      console.log(Valor);
-      
-    });
-  })
-  
-  .catch(error => {
-    // Ocorreu um erro na requisição
-    console.error('Erro:', error);
-  });
-*/
-
 var Lancamentos = [
   {
     Descricao: "Rolê",
@@ -44,7 +26,6 @@ var Lancamentos = [
 ];
 
 function ExibirLancamentos() {
-
   var totalHTML = "";
 
   // Objeto para armazenar as somas individuais de cada responsável
@@ -52,7 +33,6 @@ function ExibirLancamentos() {
 
   //Percorrer o Array de Lançamentos
   for (let i = 0; i < Lancamentos.length; i++) {
-
     const responsaveis = Lancamentos[i].Responsaveis;
     const PegaValor = Lancamentos[i].Valor;
     //Calcula o valor individual a pagar por evento
@@ -68,7 +48,6 @@ function ExibirLancamentos() {
       } else {
         somaResponsaveis[responsavel] = ValorEvento;
       }
-
     }
   }
 
