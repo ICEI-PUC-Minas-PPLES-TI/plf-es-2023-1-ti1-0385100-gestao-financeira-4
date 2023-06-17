@@ -1,19 +1,18 @@
 .borda {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 .PaiDeTodos {
-    height: 100vw;
+  height: 100vw;
 }
 
 .headline {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1em;
-     
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
 }
 
 .card-contents {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
