@@ -11,18 +11,20 @@ function exibeGruposNaTela(grupos) {
   const cardsContainer = document.getElementById("listagem-grupos");
   cardsContainer.innerHTML = ""; // Limpa o container de cards
 
-  for (i = 0; i < grupos.length; i++) {
+  for (let i = 0; i < grupos.length; i++) {
     const grupo = grupos[i];
     const cardElement = document.createElement("div");
     cardElement.classList.add("col-md-3", "mb-3");
     cardElement.innerHTML = `
       <div class="card h-100">
-        <img src="${grupo.image}" class="card-img-top" alt="...">
+        <img src="${grupo.image}" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;" onclick="redirecionarEvento('${grupo.id}')">
         <div class="card-body">
-          <div class="botoes headline">
-            <h5 class="card-title">${grupo.titulo}</h5>
-            <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${grupo.id}" onclick="abreModalEdicao('${grupo.id}')"><i class="bi bi-pencil-square"></i></button>
-            <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${grupo.id}"><i class="bi bi-trash"></i></button>
+          <div class="botoes d-flex justify-content-between align-items-center">
+            <h5 class="card-title" style="color: #2ed47a">${grupo.titulo}</h5>
+            <div>
+              <button class="btn btn-primary btn-sm botaoEditar" data-card-id="${grupo.id}" onclick="abreModalEdicao('${grupo.id}')"><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-danger btn-sm botaoExcluir" data-card-id="${grupo.id}"><i class="bi bi-trash"></i></button>
+            </div>
           </div>
           <h6 class="card-subtitle mb-2 text-body-secondary mt-1">${grupo.quantidade} Eventos</h6>
         </div>
@@ -31,6 +33,10 @@ function exibeGruposNaTela(grupos) {
 
     cardsContainer.appendChild(cardElement);
   }
+}
+
+function redirecionarEvento(cardId) {
+  window.location.href = `/../codigo/modulos/eventos.html/${cardId}`;
 }
 
 function adicionarOuvintesExcluir() {
@@ -53,7 +59,7 @@ function excluirCard(cardId) {
 
   const cardElement = document.querySelector(`[data-card-id="${cardId}"]`);
   if (cardElement) {
-    cardElement.parentElement.parentElement.parentElement.remove();
+    cardElement.parentElement.parentElement.parentElement.parentElement.remove();
   }
 }
 
@@ -127,7 +133,7 @@ function abreModalEdicao(cardId) {
 }
 
 const BloqueiaNumero = document.getElementById("cardImage");
-BloqueiaNumero.addEventListener("keydown", function(event) {
+BloqueiaNumero.addEventListener("keydown", function (event) {
   if (event.key >= 0 && event.key <= 9) {
     event.preventDefault();
     alert("Esse não é um campo para números. Adicione a URL da imagem");
