@@ -95,7 +95,6 @@ form.addEventListener("submit", function (event) {
   exibeLancamentoNaTela(JSON.parse(localStorage.getItem("lancamentos")) || []);
 });
 
-// Redirecionar para a página de Cálculo Final quando o botão "Cálculo Final" é clicado
 document
   .getElementById("calculoFinalButton")
   .addEventListener("click", function () {
