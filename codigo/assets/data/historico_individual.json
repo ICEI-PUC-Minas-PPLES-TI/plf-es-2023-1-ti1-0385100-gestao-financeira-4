@@ -1,110 +1,110 @@
 [
-    {
-      "id": 1,
-      "descricao": "Netflix",
-      "categoria": "Assinaturas",
-      "valor": 100,
-      "data": "10/04/2023",
-      "grupo": "Pessoal",
-      "responsaveis": 4
-    },
-    {
-        "id": 2,
-        "descricao": "Escola",
-        "categoria": "Educação",
-        "valor": 2500,
-        "data": "11/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 3,
-        "descricao": "IPTU",
-        "categoria": "Casa",
-        "valor": 90,
-        "data": "12/04/2023",
-        "grupo": "Apartamento",
-        "responsaveis": 2
-      },
-      {
-        "id": 4,
-        "descricao": "Plano de Saúde",
-        "categoria": "Saúde",
-        "valor": 580,
-        "data": "13/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 5,
-        "descricao": "Película",
-        "categoria": "Outros",
-        "valor": 15,
-        "data": "14/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 6,
-        "descricao": "Tênis Mateus",
-        "categoria": "Vestuário",
-        "valor": 150,
-        "data": "15/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 7,
-        "descricao": "Uber",
-        "categoria": "Rolê",
-        "valor": 250,
-        "data": "16/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 8,
-        "descricao": "Mahal",
-        "categoria": "Lazer",
-        "valor": 550,
-        "data": "17/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 9,
-        "descricao": "Faculdade",
-        "categoria": "Estudos",
-        "valor": 4500,
-        "data": "18/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 10,
-        "descricao": "Gasolina",
-        "categoria": "Estudos",
-        "valor": 450,
-        "data": "19/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 11,
-        "descricao": "Aniversário",
-        "categoria": "Lazer",
-        "valor": 250,
-        "data": "20/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      },
-      {
-        "id": 12,
-        "descricao": "Compras",
-        "categoria": "Lazer",
-        "valor": 650,
-        "data": "21/04/2023",
-        "grupo": "Família",
-        "responsaveis": 2
-      }
+  {
+    "id": 1,
+    "descricao": "Netflix",
+    "categoria": "Assinaturas",
+    "valor": 100,
+    "data": "10/04/2023",
+    "grupo": "Pessoal",
+    "responsaveis": ["Carlos"]
+  },
+  {
+    "id": 2,
+    "descricao": "Escola",
+    "categoria": "Educação",
+    "valor": 2500,
+    "data": "11/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Carlos", "Luisa"]
+  },
+  {
+    "id": 3,
+    "descricao": "IPTU",
+    "categoria": "Casa",
+    "valor": 90,
+    "data": "12/04/2023",
+    "grupo": "Apartamento",
+    "responsaveis": ["Carlos"]
+  },
+  {
+    "id": 4,
+    "descricao": "Plano de Saúde",
+    "categoria": "Saúde",
+    "valor": 580,
+    "data": "13/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Luisa"]
+  },
+  {
+    "id": 5,
+    "descricao": "Película",
+    "categoria": "Outros",
+    "valor": 15,
+    "data": "14/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Carlos"]
+  },
+  {
+    "id": 6,
+    "descricao": "Tênis Mateus",
+    "categoria": "Vestuário",
+    "valor": 150,
+    "data": "15/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Luisa"]
+  },
+  {
+    "id": 7,
+    "descricao": "Uber",
+    "categoria": "Rolê",
+    "valor": 250,
+    "data": "16/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Luisa"]
+  },
+  {
+    "id": 8,
+    "descricao": "Mahal",
+    "categoria": "Lazer",
+    "valor": 550,
+    "data": "17/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Luisa"]
+  },
+  {
+    "id": 9,
+    "descricao": "Faculdade",
+    "categoria": "Estudos",
+    "valor": 4500,
+    "data": "18/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Carlos"]
+  },
+  {
+    "id": 10,
+    "descricao": "Gasolina",
+    "categoria": "Estudos",
+    "valor": 450,
+    "data": "19/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Carlos"]
+  },
+  {
+    "id": 11,
+    "descricao": "Aniversário",
+    "categoria": "Lazer",
+    "valor": 250,
+    "data": "20/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Luisa", "Carlos"]
+  },
+  {
+    "id": 12,
+    "descricao": "Compras",
+    "categoria": "Lazer",
+    "valor": 650,
+    "data": "21/04/2023",
+    "grupo": "Família",
+    "responsaveis": ["Carlos"]
+  }
 ]
