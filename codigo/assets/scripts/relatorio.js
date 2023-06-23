@@ -1,4 +1,4 @@
-var Lancamentos = [
+/*var Lancamentos = [
   {
     Descricao: "Rolê",
     Categoria: "bebida",
@@ -23,10 +23,16 @@ var Lancamentos = [
     Grupo: "amigos",
     Responsaveis: ["Renan"],
   },
-];
+];*/
+
+
+
 
 function ExibirLancamentos() {
   var totalHTML = "";
+
+  var Lancamentos = JSON.parse(localStorage.getItem("lancamentos"));
+  console.log(Lancamentos);
 
   // Objeto para armazenar as somas individuais de cada responsável
   const somaResponsaveis = {};
@@ -58,3 +64,6 @@ function ExibirLancamentos() {
     total.innerHTML += `<div class="resultado"><p>${responsavel}</p><span>R$${somaResponsaveis[responsavel]}</span></div>`;
   }
 }
+
+var aValue = localStorage.getItem("lancamentos");
+
