@@ -1,10 +1,10 @@
 function buscaDadosLocalStorage() {
-  const cardsLocalStorage = localStorage.getItem("db_cards");
+  const cardsLocalStorage = localStorage.getItem("db_cards_eventos");
   return cardsLocalStorage ? JSON.parse(cardsLocalStorage) : [];
 }
 
 function salvaDadosLocalStorage(cards) {
-  localStorage.setItem("db_cards", JSON.stringify(cards));
+  localStorage.setItem("db_cards_eventos", JSON.stringify(cards));
 }
 
 function exibeEventosNaTela(eventos) {
