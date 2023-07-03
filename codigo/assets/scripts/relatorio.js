@@ -1,4 +1,4 @@
-var Lancamentos = [
+/*var Lancamentos = [
   {
     Descricao: "Rolê",
     Categoria: "bebida",
@@ -23,20 +23,28 @@ var Lancamentos = [
     Grupo: "amigos",
     Responsaveis: ["Renan"],
   },
-];
+];*/
+
+
+/* CONVERTER VALOR DE STRING PARA INTEIRO */
+/* USAR METÓDO SPLIT PARA PEGAR RESPONSÁVEIS E CONTÁLOS */
 
 function ExibirLancamentos() {
   var totalHTML = "";
+
+  var Lancamentos = JSON.parse(localStorage.getItem("lancamentos"));
+  console.log(Lancamentos);
 
   // Objeto para armazenar as somas individuais de cada responsável
   const somaResponsaveis = {};
 
   //Percorrer o Array de Lançamentos
   for (let i = 0; i < Lancamentos.length; i++) {
-    const responsaveis = Lancamentos[i].Responsaveis;
-    const PegaValor = Lancamentos[i].Valor;
+    const responsaveis = Lancamentos[i].responsaveis.split(','); //Separar responsáveis nome dos responsáveis por ,
+    const quantidadeResponsaveis = responsaveis.length; // Pega a quantidade de responsáveis
+    const PegaValor = parseInt(Lancamentos[i].valor, 10);
     //Calcula o valor individual a pagar por evento
-    const ValorEvento = PegaValor / responsaveis.length;
+    const ValorEvento = PegaValor / quantidadeResponsaveis;
 
     //Percorrer o Array de responsáveis
     for (let j = 0; j < responsaveis.length; j++) {
@@ -58,3 +66,6 @@ function ExibirLancamentos() {
     total.innerHTML += `<div class="resultado"><p>${responsavel}</p><span>R$${somaResponsaveis[responsavel]}</span></div>`;
   }
 }
+
+var aValue = localStorage.getItem("lancamentos");
+
