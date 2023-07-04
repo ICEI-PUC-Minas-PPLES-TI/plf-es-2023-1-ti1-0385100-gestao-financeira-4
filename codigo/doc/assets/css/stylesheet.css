@@ -1026,6 +1026,7 @@ hr {
   transform: translate(-50%, 0) translateZ(0);
   -webkit-transform: translate(-50%, 0) translateZ(0);
 }
+
 .primary-menu.navbar-line-under-text ul.navbar-nav > li > a:hover:not(.logo):after, .primary-menu.navbar-line-under-text ul.navbar-nav > li > a.active:after {
   width: calc(100% - 0.99em);
 }
@@ -2311,8 +2312,6 @@ hr {
   background: #fff;
   color: #252b33;
   margin-left: 260px;
-  padding: 66px 0px;
-  padding: 4.125rem 0;
 }
 #footer .nav .nav-item {
   display: inline-block;
@@ -2958,4 +2957,8 @@ input:-internal-autofill-selected {
   right: auto;
   left: -40px;
   border-radius: 4px 0px 0px 4px;
+}
+
+strong {
+  font-weight: 700;
 }
