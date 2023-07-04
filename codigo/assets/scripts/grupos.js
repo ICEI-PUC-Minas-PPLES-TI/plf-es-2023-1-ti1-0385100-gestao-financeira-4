@@ -17,7 +17,7 @@ function exibeGruposNaTela(grupos) {
     cardElement.classList.add("col-md-3", "mb-3");
     cardElement.innerHTML = `
       <div class="card h-100">
-        <img src="${grupo.image}" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;" onclick="redirecionarEvento('${grupo.id}')">
+        <img src="${grupo.image}" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;" onclick="redirecionarEvento('${grupo.id}', '${grupo.id}')">
         <div class="card-body">
           <div class="botoes d-flex justify-content-between align-items-center">
             <h5 class="card-title" style="color: #2ed47a">${grupo.titulo}</h5>
@@ -35,8 +35,8 @@ function exibeGruposNaTela(grupos) {
   }
 }
 
-function redirecionarEvento(cardId) {
-  window.location.href = "/../codigo/modulos/eventos.html";
+function redirecionarEvento(cardId, groupId) {
+  window.location.href = `/../codigo/modulos/eventos.html?grupo=${groupId}`;
 }
 
 function adicionarOuvintesExcluir() {

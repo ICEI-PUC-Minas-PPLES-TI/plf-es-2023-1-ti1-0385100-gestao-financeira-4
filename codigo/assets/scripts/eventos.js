@@ -7,6 +7,23 @@ function salvaDadosLocalStorage(cards) {
   localStorage.setItem("db_cards_eventos", JSON.stringify(cards));
 }
 
+function getEventosPorGrupo(groupId) {
+  if (!groupId) {
+    return [];
+  }
+
+  const cardsLocalStorage = buscaDadosLocalStorage();
+  return cardsLocalStorage.filter((card) => card.grupo === groupId);
+}
+
+// Obtenha o parâmetro "grupo" da URL
+const urlParams = new URLSearchParams(window.location.search);
+const groupId = urlParams.get("grupo");
+
+// Exiba apenas os eventos relacionados ao grupo especificado
+const eventosPorGrupo = getEventosPorGrupo(groupId);
+exibeEventosNaTela(eventosPorGrupo);
+
 function exibeEventosNaTela(eventos) {
   const cardsContainer = document.getElementById("listagem-eventos");
   var textoHtml = "";
@@ -61,19 +78,10 @@ function excluirCard(cardId) {
   }
 }
 
-function buscaDadosEventos() {
-  return fetch("../assets/data/eventos.json").then(function (response) {
-    return response.json();
-  });
-}
-
 function exibeTodosEventos() {
-  buscaDadosEventos().then(function (grupos) {
-    const cardsLocalStorage = buscaDadosLocalStorage();
-    const todosGrupos = [...grupos, ...cardsLocalStorage];
-    exibeEventosNaTela(todosGrupos);
-    adicionarOuvintesExcluir();
-  });
+  const cardsLocalStorage = buscaDadosLocalStorage();
+  exibeEventosNaTela(cardsLocalStorage);
+  adicionarOuvintesExcluir();
 }
 
 const cardForm = document.getElementById("cardForm");
