@@ -39,6 +39,14 @@
   - [Divisão de Papéis](#divisão-de-papéis)
   - [Ferramentas](#ferramentas)
   - [Controle de Versão](#controle-de-versão)
+- [Projeto da Solução](#projeto-da-solução)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Arquitetura da solução](#arquitetura-da-solução)
+- [Avaliação da Aplicação](#avaliação-da-aplicação)
+  - [Plano de Testes](#plano-de-testes)
+  - [Ferramentas de Testes (Opcional)](#ferramentas-de-testes-opcional)
+  - [Registros de Testes](#registros-de-testes)
+- [Referências](#referências)
 
 # Introdução
 
@@ -312,3 +320,273 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > **GitHub Feature Branch Workflow**:
 >
 > ![Exemplo de Wireframe](images/Github-Workflow.png)
+
+# Projeto da Solução
+
+A proposta de solução do projeto visa desenvolver uma plataforma online que objetiva otimizar a divisão de despesas em grupos. A plataforma oferecerá aos usuários a capacidade de cadastrar as despesas compartilhadas, permitindo que os cálculos pertinentes sejam realizados de forma automatizada, fornecendo a cada indivíduo informações precisas sobre o montante a ser pago e o beneficiário correspondente.
+
+## Tecnologias Utilizadas
+
+> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
+> problema, ou seja, implementar a sua solução. Liste todas as
+> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
+> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+> Apresente também uma figura explicando como as tecnologias estão
+> relacionadas ou como uma interação do usuário com o sistema vai ser
+> conduzida, por onde ela passa até retornar uma resposta ao usuário.
+> 
+> Inclua os diagramas de User Flow, esboços criados pelo grupo
+> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
+> item textualmente comentando e complementando o que está apresentado
+> nas imagens.
+
+## Arquitetura da solução
+
+> Inclua um diagrama da solução e descreva os módulos e as tecnologias
+> que fazem parte da solução. Discorra sobre o diagrama.
+> 
+> **Exemplo do diagrama de Arquitetura**:
+> 
+> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+
+# Avaliação da Aplicação
+
+Durante os testes da aplicação, foram utilizados os seguintes cenários para avaliar a satisfação dos requisitos:
+
+> **Cenário de Teste: Cadastro de Usuário**
+> 
+> *Descrição: Verificar se é possível cadastrar um novo usuário com sucesso.*
+>   Passos:
+> - Acessar a página de cadastro.
+> - Preencher os campos obrigatórios (nome, e-mail, senha).
+> - Clicar no botão de cadastro.
+> - Verificar se o usuário é redirecionado para a página de login.
+> - Critérios de sucesso: O usuário é cadastrado com sucesso e redirecionado para a página de login.
+> 
+> **Cenário de Teste: Login**
+> 
+> *Descrição: Verificar se é possível realizar o login na aplicação.*
+>   Passos:
+> - Acessar a página de login.
+> - Preencher os campos de e-mail e senha.
+> - Clicar no botão de login.
+> - Verificar se o usuário é redirecionado para a página inicial da aplicação.
+> - Critérios de sucesso: O usuário realiza o login com sucesso e é redirecionado para a página inicial.
+> 
+> **Cenário de Teste: Criação de Grupo**
+> 
+> *Descrição: Verificar se é possível criar um novo grupo.*
+>   Passos:
+> - Acessar a página de criação de grupo.
+> - Preencher os campos obrigatórios (nome do grupo, descrição).
+> - Clicar no botão de criação.
+> - Verificar se o grupo é criado com sucesso e aparece na lista de grupos do usuário.
+> - Critérios de sucesso: O grupo é criado com sucesso e aparece na lista de grupos do usuário.
+> 
+> **Cenário de Teste: Adição de Usuário ao Grupo**
+> 
+> *Descrição: Verificar se é possível adicionar um novo usuário a um grupo existente.*
+>   Passos:
+> - Acessar a página de configuração do grupo.
+> - Digitar o nome ou e-mail do usuário a ser adicionado.
+> - Selecionar o usuário na lista de sugestões.
+> - Clicar no botão de adicionar usuário.
+> - Verificar se o usuário é adicionado com sucesso ao grupo.
+> - Critérios de sucesso: O usuário é adicionado com sucesso ao grupo e aparece na lista de membros do grupo.
+> 
+> **Cenário de Teste: Criação de Evento**
+> 
+> *Descrição: Verificar se é possível criar um novo evento dentro de um grupo.*
+>   Passos:
+> - Acessar a página de criação de evento.
+> - Preencher os campos obrigatórios (nome do evento, data, descrição).
+> - Selecionar o grupo no qual o evento será criado.
+> - Clicar no botão de criação.
+> - Verificar se o evento é criado com sucesso e aparece na lista de eventos do grupo.
+> - Critérios de sucesso: O evento é criado com sucesso e aparece na lista de eventos do grupo.
+> 
+> **Cenário de Teste: Visualização do Histórico de Gastos Individual**
+> 
+> *Descrição: Verificar se é possível visualizar o histórico de gastos individuais de um usuário.*
+>   Passos:
+> - Acessar a página de histórico de gastos individuais.
+> - Verificar se são exibidos os gastos realizados pelo usuário, organizados por data ou categoria.
+> - Validar se os valores e informações dos gastos estão corretos.
+> - Critérios de sucesso: O usuário consegue visualizar corretamente o histórico de gastos individuais.
+> 
+> **Cenário de Teste: Visualização do Histórico de Gastos Compartilhado**
+> 
+>  *Descrição: Verificar se é possível visualizar o histórico de gastos compartilhados de um grupo.*
+>   Passos:
+> - Acessar a página de histórico de gastos compartilhados do grupo desejado.
+> - Verificar se são exibidos os gastos realizados por todos os membros do grupo, organizados por data ou categoria.
+> - Validar se os valores e informações dos gastos estão corretos.
+> - Critérios de sucesso: Os membros do grupo conseguem visualizar corretamente o histórico de gastos compartilhados.
+> 
+> **Cenário de Teste: Cadastro de Despesas Compartilhadas**
+> 
+> *Descrição: Verificar a capacidade de cadastrar despesas compartilhadas entre os membros de um grupo.*
+>   Passos:
+> - Acessar a página de criação de despesas compartilhadas.
+> - Preencher os campos necessários, como descrição da despesa, valor e membros envolvidos.
+> - Salvar a despesa compartilhada.
+> - Verificar se a despesa foi cadastrada corretamente e está disponível para todos os membros do grupo.
+> - Critérios de sucesso: A despesa compartilhada é cadastrada com sucesso e todos os membros do grupo têm acesso a ela.
+> 
+> **Cenário de Teste: Cálculo Automático de Divisão de Gastos**
+> 
+> *Descrição: Verificar a precisão no cálculo automático da divisão de gastos entre os membros do grupo.*
+>   Passos:
+> - Acessar a página de visualização de despesas compartilhadas.
+> - Selecionar uma despesa compartilhada.
+> - Verificar se o sistema realiza o cálculo automático da divisão de gastos de forma precisa.
+> - Validar se os valores de pagamento são corretamente atribuídos a cada membro do grupo.
+> - Critérios de sucesso: O cálculo automático da divisão de gastos é preciso e os valores de pagamento são corretamente atribuídos a cada membro do grupo.
+> 
+> **Cenário de Teste: Tratamento de Exceções**
+> 
+> *Descrição: Verificar a capacidade do sistema de lidar com exceções e erros inesperados.*
+>   Passos:
+> - Realizar ações que possam gerar exceções, como inserir valores inválidos em campos de cadastro.
+> - Verificar se o sistema exibe mensagens de erro apropriadas para cada exceção.
+> - Testar diferentes cenários de exceções e verificar se o sistema trata essas situações corretamente.
+> - Critérios de sucesso: O sistema exibe mensagens de erro apropriadas e trata as exceções de forma adequada.
+> 
+> **Cenário de Teste: Navegabilidade e Usabilidade**
+> 
+> *Descrição: Verificar a facilidade de navegação entre as telas e a usabilidade geral da plataforma.*
+>   Passos:
+> - Realizar tarefas comuns, como criar um grupo, adicionar membros a um grupo e visualizar o histórico de gastos.
+> - Observar o fluxo de navegação e verificar se é intuitivo e sem problemas.
+> - Avaliar a usabilidade geral da plataforma, como a disposição dos elementos na interface e a clareza das informações apresentadas.
+> - Critérios de sucesso: O fluxo de navegação é intuitivo e sem problemas, e a usabilidade geral da plataforma é satisfatória.
+
+## Plano de Testes
+
+Os seguintes cenários de testes foram selecionados para avaliação:
+
+> **Cadastro de Usuário para Login:**
+> 
+> - Funcionalidade avaliada: Capacidade de cadastrar um novo usuário para login no sistema.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários.
+> - Ferramentas utilizadas: Jasmine e Mocha para testes unitários e de integração.
+> 
+> **Criação de Grupos:**
+> 
+> - Funcionalidade avaliada: Habilidade de criar novos grupos no sistema.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários.
+> - Ferramentas utilizadas: Jasmine e Mocha para testes unitários e de integração.
+> 
+> **Criação de Eventos:**
+> 
+> - Funcionalidade avaliada: Capacidade de criar novos eventos dentro de um grupo.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários com permissão de criação de eventos.
+> - Ferramentas utilizadas: Jasmine e Mocha para testes unitários e de integração.
+> 
+> **Visualização do Histórico de Gastos Individual:**
+> 
+> - Funcionalidade avaliada: Capacidade de visualizar o histórico de gastos individuais.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários.
+> - Ferramentas utilizadas: Testes de usabilidade com observação direta dos usuários.
+> 
+> **Visualização do Histórico de Gastos Compartilhado:**
+> 
+> - Funcionalidade avaliada: Habilidade de visualizar o histórico de gastos compartilhados em um grupo.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários pertencentes ao mesmo grupo.
+> - Ferramentas utilizadas: Testes de usabilidade com observação direta dos usuários.
+> 
+> **Cadastro de Despesas Compartilhadas:**
+> 
+> - Funcionalidade avaliada: Capacidade de cadastrar despesas compartilhadas entre os membros de um grupo.
+> - Grupo de usuários: Representantes de cada perfil de usuário (administrador, membro regular).
+> - Ferramentas utilizadas: Jasmine e Mocha para testes unitários e de integração.
+> 
+> **Cálculo Automático de Divisão de Gastos:**
+> 
+> - Funcionalidade avaliada: Precisão no cálculo automático da divisão de gastos entre os membros do grupo.
+> - Grupo de usuários: Representantes de grupos com diferentes configurações de despesas e membros.
+> - Ferramentas utilizadas: Jasmine e Mocha para testes unitários e de integração.
+> 
+> **Tratamento de Exceções:**
+> 
+> - Funcionalidade avaliada: Capacidade do sistema de lidar com exceções e erros inesperados.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários, realizando ações que possam gerar exceções.
+> - Ferramentas utilizadas: Jasmine e Mocha para testes unitários e de integração.
+> 
+> **Navegabilidade e Usabilidade:**
+> 
+> - Funcionalidade avaliada: Facilidade de navegação entre as telas e usabilidade geral da plataforma.
+> - Grupo de usuários: Representantes de diferentes perfis de usuários, com variados níveis de familiaridade com a plataforma.
+> - Ferramentas utilizadas: Testes de usabilidade com observação direta dos usuários.
+
+Orientações:
+
+> **Links Úteis**:
+> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
+> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
+> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+
+## Ferramentas de Testes (Opcional)
+
+No projeto, utilizamos uma combinação de ferramentas de teste para garantir a qualidade e a confiabilidade do software desenvolvido. Algumas das principais ferramentas de teste utilizadas incluem:
+
+> Jasmine
+
+Jasmine é um framework de testes de comportamento para JavaScript.
+Permite a criação de testes unitários e de integração.
+Verifica o correto funcionamento das funcionalidades implementadas.
+
+> Mocha
+
+Mocha é outro framework popular para testes JavaScript.
+Oferece suporte a diversos estilos de escrita de testes.
+Inclui testes assíncronos.
+Facilita a criação de casos de teste abrangentes e confiáveis.
+
+> Selenium
+
+Selenium é uma ferramenta de automação de teste.
+Permite a execução de testes funcionais em aplicativos web.
+Possibilita a simulação de interações do usuário em um navegador real.
+Verifica o comportamento correto das páginas web.
+Detecta possíveis problemas de usabilidade.
+> 
+> **Links Úteis**:
+> - [Jasmine]([https://geekflare.com/javascript-unit-testing/](https://jasmine.github.io/))
+> - [Mocha]([https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7](https://mochajs.org/))
+> - [Selenium]([https://www.selenium.dev/])
+
+## Registros de Testes
+
+Após a realização dos testes, foram identificados alguns pontos fortes e fracos na solução desenvolvida.
+
+> Pontos fortes:
+
+- A solução demonstrou eficiência ao calcular automaticamente a divisão de gastos em grupo, fornecendo valores precisos a serem pagos por cada participante.
+- A plataforma apresentou uma interface intuitiva e amigável, facilitando o cadastro de despesas compartilhadas.
+- Os testes revelaram que a solução foi capaz de lidar com um volume considerável de dados e processá-los de forma rápida e precisa.
+- Os resultados dos testes também demonstraram a capacidade da solução de realizar a atribuição correta das despesas aos responsáveis por cada pagamento.
+
+> Pontos fracos:
+ 
+- Foram identificadas algumas falhas no tratamento de exceções, resultando em erros inesperados durante a execução.
+- A velocidade de resposta do sistema em determinadas situações de carga pesada foi considerada abaixo do ideal.
+- Alguns usuários relataram dificuldades na navegação entre as diferentes telas da plataforma.
+
+> Para abordar esses pontos nas próximas iterações, a equipe pretende adotar as seguintes medidas:
+
+- Realizar uma revisão e aprimoramento das rotinas de tratamento de exceções para garantir uma experiência mais robusta e livre de erros.
+- Otimizar o desempenho do sistema por meio de ajustes no código, implementação de técnicas de cache e otimização de consultas de banco de dados.
+- Aperfeiçoar a navegabilidade da plataforma, simplificando a transição entre telas e melhorando a usabilidade geral.
+
+> A partir dos resultados obtidos nos testes, as falhas detectadas serão tratadas como oportunidades de melhoria. O grupo se compromete a implementar as correções necessárias para solucionar as falhas e aprimorar a solução em futuras iterações, visando fornecer aos usuários uma experiência mais fluida, confiável e satisfatória.
+
+# Referências Bibliográficas
+
+> A lista a seguir traz as referências utilizadas nesse projeto. são elas: 
+>  Instituto Pet Brasil,  o país tem 3,9 milhões de animais em condição de vulnerabilidade. 2019. 
+>  Disponível em: http://institutopetbrasil.com/imprensa/pais-tem-39-milhoes-de-animais-em-condicao-de-vulnerabilidade/#:~:text=O%20levantamento%20do%20Instituto%20Pet,mais%20de%20172%20mil%20animais.  Acesso em 15/04/2023.
+>
+>  Jane A, A. São mais de 20 anos nessa triste realidade, Instagram. 2022.
+>  Disponível em: https://www.instagram.com/reel/CqTDkpcjFMD/?igshid=YmMyMTA2M2Y= Acesso em 29/03/2023.
+>
