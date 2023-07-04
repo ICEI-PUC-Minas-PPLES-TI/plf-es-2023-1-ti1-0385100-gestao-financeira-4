@@ -4,37 +4,45 @@ function ExibirLancamentos() {
   var Lancamentos = JSON.parse(localStorage.getItem("lancamentos"));
   console.log(Lancamentos);
 
-  // Objeto para armazenar as somas individuais de cada responsável
+  const urlParams = new URLSearchParams(window.location.search);
+  const eventId = urlParams.get("id");
+
+  const lancamentosFiltrados = Lancamentos.filter(
+    (lancamento) => lancamento.id === eventId
+  );
+
   const somaResponsaveis = {};
 
-  //Percorrer o Array de Lançamentos
-  for (let i = 0; i < Lancamentos.length; i++) {
-    const responsaveis = Lancamentos[i].responsaveis.split(','); //Separar responsáveis nome dos responsáveis por ,
-    const quantidadeResponsaveis = responsaveis.length; // Pega a quantidade de responsáveis
-    const PegaValor = parseInt(Lancamentos[i].valor, 10);
-    //Calcula o valor individual a pagar por evento
-    const ValorEvento = PegaValor / quantidadeResponsaveis;
+  for (let i = 0; i < lancamentosFiltrados.length; i++) {
+    const responsaveis = lancamentosFiltrados[i].responsaveis
+      .split(",")
+      .map((responsavel) => responsavel.trim());
+    const quantidadeResponsaveis = responsaveis.length;
+    const valor = parseInt(lancamentosFiltrados[i].valor, 10);
+    const valorPorResponsavel = valor / quantidadeResponsaveis;
 
-    //Percorrer o Array de responsáveis
     for (let j = 0; j < responsaveis.length; j++) {
       const responsavel = responsaveis[j];
 
-      // Incrementar o ValorEvento para o responsável atual
       if (somaResponsaveis[responsavel]) {
-        somaResponsaveis[responsavel] += ValorEvento;
+        somaResponsaveis[responsavel] += valorPorResponsavel;
       } else {
-        somaResponsaveis[responsavel] = ValorEvento;
+        somaResponsaveis[responsavel] = valorPorResponsavel;
       }
     }
   }
 
-  // Exibir a soma total para cada responsável
+  var total = document.getElementById("tela");
+  total.innerHTML = "";
+
   for (const responsavel in somaResponsaveis) {
     console.log(`${responsavel}: ${somaResponsaveis[responsavel]}`);
-    var total = document.getElementById("tela");
     total.innerHTML += `<div class="resultado"><p>${responsavel}</p><span>R$${somaResponsaveis[responsavel]}</span></div>`;
   }
 }
 
-var aValue = localStorage.getItem("lancamentos");
+window.addEventListener("load", function () {
+  ExibirLancamentos();
+});
 
+var aValue = localStorage.getItem("lancamentos");

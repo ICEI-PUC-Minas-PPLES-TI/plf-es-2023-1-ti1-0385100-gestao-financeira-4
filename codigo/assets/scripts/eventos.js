@@ -34,7 +34,7 @@ function exibeEventosNaTela(eventos) {
 }
 
 function redirecionarEvento(cardId) {
-  window.location.href = "/../codigo/modulos/lancamentos.html";
+  window.location.href = `/../codigo/modulos/lancamentos.html?id=${cardId}`;
 }
 
 function adicionarOuvintesExcluir() {
