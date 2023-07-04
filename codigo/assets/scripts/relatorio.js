@@ -13,13 +13,13 @@ function ExibirLancamentos() {
 
   const somaResponsaveis = {};
 
-  //Percorrer o Array de Lançamentos
-  for (let i = 0; i < Lancamentos.length; i++) {
-    const responsaveis = Lancamentos[i].responsaveis.split(','); //Separar responsáveis nome dos responsáveis por ,
-    const quantidadeResponsaveis = responsaveis.length; // Pega a quantidade de responsáveis
-    const PegaValor = parseInt(Lancamentos[i].valor, 10); //Convertendo string para inteiro
-    //Calcula o valor individual a pagar por evento
-    const ValorEvento = PegaValor / quantidadeResponsaveis;
+  for (let i = 0; i < lancamentosFiltrados.length; i++) {
+    const responsaveis = lancamentosFiltrados[i].responsaveis
+      .split(",")
+      .map((responsavel) => responsavel.trim());
+    const quantidadeResponsaveis = responsaveis.length;
+    const valor = parseInt(lancamentosFiltrados[i].valor, 10);
+    const valorPorResponsavel = valor / quantidadeResponsaveis;
 
     for (let j = 0; j < responsaveis.length; j++) {
       const responsavel = responsaveis[j];
