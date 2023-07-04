@@ -614,4 +614,10 @@ Após a realização dos testes, foram identificados alguns pontos fortes e frac
 
 # Referências Bibliográficas
 
-> A lista a seguir traz as referências utilizadas nesse projeto. são elas:
+> *A lista a seguir traz as referências utilizadas nesse projeto. são elas:*
+> 
+> "Change by Design: How Design Thinking Transforms Organizations and Inspires Innovation" (2009) - ISBN: 0061766089
+> "Design Thinking for Strategic Innovation: What They Can't Teach You at Business or Design School" (2013) - ISBN: 1118620127
+>
+> "Scrum: The Art of Doing Twice the Work in Half the Time" (2014) - ISBN: 038534645X
+>"The Scrum Field Guide: Agile Advice for Your First Year and Beyond" (2012) - ISBN: 0321554159
