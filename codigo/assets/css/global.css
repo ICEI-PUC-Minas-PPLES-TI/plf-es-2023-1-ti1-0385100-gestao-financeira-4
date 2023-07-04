@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+/* Resetando o CSS*/
 * {
-  /* Resetando o CSS*/
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,7 +10,10 @@
   font-style: none;
   text-decoration: none;
 }
- 
+
+a {
+  text-decoration: none !important;
+}
 
 :root {
   /*Cores globais*/
@@ -26,27 +29,44 @@
   --color-purple: #885af8;
 }
 
+.borda {
+  border: 1px solid red;
+}
+
 body {
   height: 100vh;
   background-color: var(--table-ice) !important;
 }
 
-.borda {
-  border: 1px solid red;
-}
-
 /* Ínicio Side bar Menu*/
 aside.menu-lateral {
   height: 100%;
+  padding: 30px 35px;
   position: fixed;
-  padding: 2em 0 0 2%;
   box-shadow: 7.62353px 0px 22.8706px rgba(0, 0, 0, 0.06);
-  z-index: 999;
+  z-index: 9999;
+  transition: all .5s;
 } 
+
+.btn-expandir {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.btn-expandir i:hover {
+  cursor: pointer;
+}
 
 .logo-menu img{
   width: 10em;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
+}
+
+aside.menu-lateral ul {
+  padding: 0;
 }
 
 ul li {
@@ -69,12 +89,55 @@ ul li a span i {
   font-size: 20px;
 }
 
+
 ul li a:hover span i {
   color: var(--color-green);
 }
 
 ul li a:hover span  {
   color: var(--color-green);
+}
+
+/* Ínicio Side bar encolhido */
+aside.menu-lateral.encolher {
+  width: 80px;
+}
+
+aside.menu-lateral.encolher .txt-link{
+  display: none;
+}
+
+aside.menu-lateral.encolher .logo-menu{
+  display: none;
+}
+
+aside.menu-lateral.encolher ul{
+  margin-top: 95px;
+}
+
+/* Fim Side bar encolhido */
+
+ul li.ativo a {
+  color: var(--color-green);
+}
+
+@media only screen and (max-width: 1200px) {
+
+  aside.menu-lateral {
+    width: 50%;
+    padding: 1.25em;
+    z-index: 9999;
+  }
+
+  .logo-menu img{
+    width: 8em;
+  }
+
+  aside.menu-lateral.encolher {
+    width: 60px;
+    padding: 1.25em;
+  }
+
 }
 
 /* Fim Side bar Menu*/
