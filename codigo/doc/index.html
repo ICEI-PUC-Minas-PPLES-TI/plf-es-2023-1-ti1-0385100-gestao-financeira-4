@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
@@ -52,11 +52,11 @@
               class="w-75"></span><span class="w-50"></span></button>
 
           <!-- Logo -->
-          <a class="logo ml-md-3" href="index.html" title="iDocs Template"> <img src="assets/images/logo.png"
-              alt="iDocs Template" /> </a>
+          <a class="logo ml-md-3" href="/codigo/index.html" title="iDocs Template"> <img
+              src="../assets/images/logos/Logo-Horizontal.png" alt="iDocs Template" /> </a>
           <span class="text-2 ml-2">v1.0</span>
           <!-- Logo End -->
-
+      </nav>
     </header>
     <!-- Header End -->
 
@@ -76,15 +76,29 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="#ti_funcionalidades">Funcionalidades</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#ti_func1">Funcionalidade 1</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ti_func2">Funcionalidade 2</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ti_func3">Funcionalidade 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func1">1 - Cadastro e Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func2">2 - Criação de Grupos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func3">3 - Visualização de Grupos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func4">4 - Edição de Grupos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func5">5 - Exclusão de Grupos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func6">6 - Criação de Eventos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func7">7 - Visualização de Eventos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func8">8 - Edição de Eventos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func9">9 - Exclusão de Eventos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func10">10 - Lançamento de Gastos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func11">11 - Visualização de Gastos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func12">12 - Fechar a conta</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func13">13 - Cálculo final</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_func14">14 - Histórico de gastos</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#ti_estruturas_dados">Estruturas de Dados</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#ti_ed_contatos">Contatos</a></li>
-              <li class="nav-item"><a class="nav-link" href="#ti_ed_usuarios">Usuarios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_ed_usuario">Usuário</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_ed_grupos">Grupos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_ed_eventos">Eventos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_ed_lancamentos">Lançamentos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ti_ed_historico">Histórico</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="#ti_faq">FAQ</a></li>
@@ -101,8 +115,12 @@
 		============================ -->
           <section id="ti_visao_geral">
             <h2>Visão Geral</h2>
-            <p class="lead"><strong>Projeto X</strong></p>
-            <p>Insira aqui um breve texto descritivo para sua solução.</p>
+            <p class="lead"><strong>DivideUai!</strong></p>
+            <p>O propósito do projeto consiste em criar uma plataforma digital que viabilize de forma mais ágil e
+              eficiente a distribuição de custos entre um grupo de pessoas. Essa plataforma possibilitará aos usuários o
+              registro das despesas compartilhadas, atribuindo-as aos respectivos responsáveis por cada pagamento. Com
+              base nessas informações, a plataforma realizará os cálculos necessários para fornecer a cada participante
+              um valor preciso a ser pago e o beneficiário correspondente. </p>
           </section>
 
           <section id="ti_detalhes_projeto">
@@ -111,21 +129,34 @@
             <div class="row">
               <div class="col-12">
                 <ul class="list-unstyled">
-                  <li><strong>Repositório GitHub:</strong><a href="https://github.com/rommelcarneiro/tiaw-template-2022">Template Trabalho Interdisciplinar</a></li>
-                  <li><strong>Membros da equipe:</strong><ul>
-                    <li><a href="https://github.com/rommelcarneiro">Rommel Vieira Carneiro</a></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ul></li>
+                  <li><strong>Repositório GitHub: </strong><a
+                      href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2023-1-ti1-0385100-gestao-financeira-4">Repositório
+                      GitHub - DivideUai!</a>
+                  </li>
+                  <li><strong>Membros da equipe:</strong>
+                    <ul>
+                      <li><a href="https://github.com/oarthurfc">Arthur Ferreira Costa </a></li>
+                      <li><a href="https://github.com/erica-as">Érica Alves dos Santos </a></li>
+                      <li><a href="https://github.com/InvalidUsernameII">Enrique Silva Leite </a></li>
+                      <li><a href="https://github.com/PeterSilva05">Pedro Arthur Oliveira Silva </a></li>
+                      <li><a href="https://github.com/SthelTorres">Sthel Felipe Torres </a></li>
+                    </ul>
+                  </li>
+                  <li><strong>Professores:</strong>
+                    <ul>
+                      <li><a href="https://github.com/amaliasvasconcelos">Amália Vasconcelos </a></li>
+                      <li><a href="https://github.com/rommelcarneiro">Rommel Vieira Carneiro</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>
           </section>
-            
+
           <section id="ti_video_projeto">
             <h2 class="mt-5">Video do Projeto</h2>
-            <p>O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução.</p>
+            <p>O vídeo a seguir traz uma breve apresentação da DivideUai!
+            </p>
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7e90gBu4pas"
                 allowfullscreen></iframe>
@@ -138,71 +169,360 @@
 		============================ -->
           <section id="ti_funcionalidades">
             <h2>Funcionalidades</h2>
-            <p class="lead">Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcionalidades do sistema</p>
           </section>
 
           <section id="ti_func1">
-            <h3>Funcionalidade 1 - Cadastro de Contatos</h2>
-              <p class="text-4">Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
-              <ul class="list-unstyled">
-                <li><strong>Estrutura de dados: </strong><a href="#ti_ed_contatos">Contatos</a></li>
-                <li><strong>Instruções de acesso: </strong><ul>
-                  <li>Abra o site e efetue o login</li>
-                  <li>Acesse o menu principal e escolha a opção Cadastros </li>
-                  <li>Em seguida, escolha a opção Contatos</li>
-                </ul></li>
-              </ul>
-              <p class="text-center"><img class="img-fluid" src="assets/images/cadastro-contatos.png" alt="Tela Cadastro de Contatos"></p>
-          <hr class="divider">
+            <h3>Funcionalidade 1 - Tela de login e Cadastro do usuário</h3>
+            <p class="text-4">Permite a criação de usuário e acesso ao sistema.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_usuario">Usuário</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Abra o site e crie sua conta</li>
+                  <li>Efetue o login com a conta criada </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center">
+              <img class="img-fluid" src="/docs/relatorio/images/Cadastro.jpg" alt="Tela Cadastro de Contatos">
+              <img class="img-fluid" src="/docs/relatorio/images/Login.jpg" alt="Tela Cadastro de Contatos">
+            </p>
+            <hr class="divider">
+          </section>
 
-    <section id="ti_estruturas_dados">
-      <h2>Estruturas de Dados</h2>
-      <p class="lead">Esta seção traz o detlahamento das estruturas de dados utilizadas na solução. É apresentado um exemplo de registro no formato JSON.</p>
-      </section>
+          <section id="ti_func2">
+            <h3>Funcionalidade 2 - Criação de Grupos</h3>
+            <p class="text-4">Permite a criação de grupos.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_grupos">Grupos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Grupos e visualize os grupos criados. </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/cadastro-grupo.jpeg"
+                alt="Tela Cadastro de grupos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func3">
+            <h3>Funcionalidade 3 - Visualização de Grupos Criados</h3>
+            <p class="text-4">Permite a visualização dos grupos criados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_grupos">Grupos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Grupos</li>
+                  <li>Visualize os grupos criados</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="/docs/relatorio/images/Grupos.jpg"
+                alt="Tela visualização grupos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func4">
+            <h3>Funcionalidade 4 - Edição de Grupos Criados</h3>
+            <p class="text-4">Permite a edição dos grupos criados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_grupos">Grupos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Grupos e visualize os grupos criados. </li>
+                  <li>Clique no botão de edição no card do grupo a ser editado. </li>
+                  <li>Altere as informações desejadas </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/editar-grupo.jpeg"
+                alt="Tela editar grupos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func5">
+            <h3>Funcionalidade 5 - Exclusão de Grupos Criados</h3>
+            <p class="text-4">Permite a exclusão dos grupos criados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_grupos">Grupos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Grupos e visualize os grupos criados. </li>
+                  <li>Clique no botão de excluir no card do grupo a ser excluído. </li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/exluir-grupo.jpg"
+                alt="Tela excluir grupo"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func6">
+            <h3>Funcionalidade 6 - Criação de Eventos</h3>
+            <p class="text-4">Permite a criação de eventos.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_eventos">Eventos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Eventos</li>
+                  <li>Abra a modal para o criação de um novo evento</li>
+                  <li>Informe os dados necessários para a criação do evento</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/cadastro-evento.jpeg"
+                alt="Tela Cadastro de eventos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func7">
+            <h3>Funcionalidade 7 - Visualização de Eventos criados</h3>
+            <p class="text-4">Permite a visualização dos eventos criados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_eventos">Eventos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Eventos</li>
+                  <li>Visualize os grupos criados</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="/docs/relatorio/images/Eventos.jpg"
+                alt="Tela visualização de eventos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func8">
+            <h3>Funcionalidade 8 - Edição dos Eventos Criados</h3>
+            <p class="text-4">Permite a edição dos eventos criados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_eventos">Eventos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Eventos</li>
+                  <li>Clique no botão de edição no card do evento a ser editado</li>
+                  <li>Altere as informações desejadas</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/editar-evento.jpeg "
+                alt="Tela Cadastro de Contatos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func9">
+            <h3>Funcionalidade 9 - Exclusão dos Eventos Criados</h3>
+            <p class="text-4">Permite ao usuário excluir eventos criados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_eventos">Eventos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela Eventos</li>
+                  <li>Clique no botão de excluir no card do evento a ser excluído.</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/exluir-evento.jpg "
+                alt="Tela exclusão de eventos"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func10">
+            <h3>Funcionalidade 10 - Lançamento de Gastos</h3>
+            <p class="text-4">Permite o lançamento de gastos.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_lancamentos">Lançamentos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela lançamentos</li>
+                  <li>Abra o modal para o lançamento de novos gastos</li>
+                  <li>Informe os dados necessários para o lançamento do gasto</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/lancar-gasto.png"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func11">
+            <h3>Funcionalidade 11 - Visualização de Gastos Lançados</h3>
+            <p class="text-4">Permite ao usuário visualizar os gastos lançados.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_lancamentos">Lançamentos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela lançamentos</li>
+                  <li>Visualize os gastos já lançados</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/visualizar-lancamentos.png"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func12">
+            <h3>Funcionalidade 12 - Redirecionamento para o Cálculo Final</h3>
+            <p class="text-4">Permite o redirecionamento para a tela do cálculo final após o lançamento de gastos.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_lancamentos">Lançamentos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela lançamentos</li>
+                  <li>Clique em Fechar a Conta</li>
+                  <li>Confirme o redirecionamento para a tela do Cálculo Final</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/finalizar-conta.png"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func13">
+            <h3>Funcionalidade 13 - Visualização do Cálculo final / Relatório</h3>
+            <p class="text-4">Permite ao usuário visualizar o Relatório do Cálculo Final.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_lancamentos">Lançamentos</a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela relatório</li>
+                  <li>Visualize o cálculo final dos gastos lançados</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/relatorio.png"></p>
+            <hr class="divider">
+          </section>
+
+          <section id="ti_func14">
+            <h3>Funcionalidade 14 - Visualização do Histórico de gastos</h3>
+            <p class="text-4">Permite ao usuário visualizar o seu histórico de gastos.
+            </p>
+            <ul class="list-unstyled">
+              <li><strong>Estrutura de dados: </strong><a href="#ti_ed_historico">Histórico </a></li>
+              <li><strong>Instruções de acesso: </strong>
+                <ul>
+                  <li>Acesse a tela de Histórico</li>
+                  <li>Alterne entre o histórico Individual e Compartilhado</li>
+                  <li>Visualize o histórico de gastos do usuário</li>
+                </ul>
+              </li>
+            </ul>
+            <p class="text-center"><img class="img-fluid" src="../doc/assets/images/historico.jpeg "
+                alt="Tela de Visualização do Histórico de gastos"></p>
+            <hr class="divider">
+          </section>
+
           <!-- Code
-		============================ -->
-          <section id="ti_ed_contatos">
-            <h2>Estruturas de Dados - Contatos</h2>
-            <p class="text-4">Contatos da aplicação</p>
+            ============================ -->
+
+          <section id="ti_estruturas_dados">
+            <h2>Estruturas de Dados</h2>
+          </section>
+
+          <section id="ti_ed_usuario">
+            <h3>Estruturas de Dados - Usuário</h3>
+            <p class="text-4">Registro dos usuários do sistema utilizados para o login e para o perfil da aplicação.
+            </p>
 
             <pre>
-              {
-                "id": 1,
-                "nome": "Leanne Graham",
-                "cidade": "Belo Horizonte",
-                "categoria": "amigos",
-                "email": "Sincere@april.biz",
-                "telefone": "1-770-736-8031",
-                "website": "hildegard.org"
-              }
+                    "users": [ 
+                      { 
+                        "username": "exemplo", 
+                        "email": "exemplo@email.com", 
+                        "password": "senha123" 
+                      } 
+                    ] 
             </pre>
-          </section>    
+          </section>
 
-          <section id="ti_ed_usuarios">
-            <h2>Estruturas de Dados - Usuários</h2>
+          <hr class="divider">
+
+          <section id="ti_ed_grupos">
+            <h3>Estruturas de Dados - Grupos</h3>
             <p class="text-4">Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
 
             <pre>
-              {
-                id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                email: "admin@abc.com"
-                id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                login: "admin"
-                nome: "Administrador do Sistema"
-                senha: "123"
+                  { 
+                    "id": 1, 
+                    "titulo": "Pessoal", 
+                    "categoria": "individual", 
+                    "quantidade": 7, 
+                    "image": "../assets/images/grupos/pessoal_db.jpg" 
+                  }
+            </pre>
+          </section>
+
+          <hr class="divider">
+
+          <section id="ti_ed_eventos">
+            <h3>Estruturas de Dados - Eventos</h3>
+            <p class="text-4">Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
+
+            <pre>
+                  { 
+                    "id": 2, 
+                    "titulo": "Pensando1", 
+                    "capa": "https://bhdetalhes.com/wp-content/uploads/2018/11/gennaro-mesas.jpg", 
+                    "pessoas": 2 
+                  } 
+            </pre>
+          </section>
+
+          <hr class="divider">
+
+          <section id="ti_ed_lancamentos">
+            <h3>Estruturas de Dados - Lançamentos</h3>
+            <p class="text-4">Registro dos gastos lançados pelo usuário na aplicação. </p>
+            <pre>
+              { 
+                "id": 1, 
+                "descricao": "Rolê", 
+                "categoria": "Ingressos", 
+                "valor": 120, 
+                "data": "17/06/2023", 
+                "grupo": "Amigos", 
+                "responsaveis": ["Arthur", "Erica", "Sthel", "Pedro"] 
               }
             </pre>
           </section>
 
           <hr class="divider">
 
+          <section id="ti_ed_historico">
+            <h3>Estruturas de Dados - Histórico</h3>
+            <p class="text-4">Registro dos gastos compartilhados do usuário cadastrados na aplicação.</p>
+
+            <pre>
+              { 
+                "id": 1, 
+                "descricao": "Netflix", 
+                "categoria": "Outros", 
+                "valor": 100, 
+                "data": "10/04/2023", 
+                "grupo": "Amigos", 
+                "responsaveis": ["Pedro", "Carlos", "Jane", "Alice"]
+              }, 
+            </pre>
+          </section>
 
           <!-- FAQ
 		============================ -->
           <section id="ti_faq">
             <h2>FAQ</h2>
-            <p class="text-4">Esta lista apresenta um conjunto de perguntas e respostas comuns associadas ao projeto
-            </p>
 
             <div class="row">
               <div class="col-lg-12">
@@ -210,82 +530,72 @@
                   <div class="card">
                     <div class="card-header" id="heading1">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                          aria-expanded="false" aria-controls="collapse1">What does royalty free mean?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse1">Como funciona a DivideUai ?</a> </h5>
                     </div>
                     <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
-                      <div class="card-body"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-                        only five centuries, but also the leap into electronic typesetting, remaining essentially
-                        unchanged. </div>
+                      <div class="card-body"> A DivideUai! é uma plataforma digital que
+                        permite aos usuários registrarem as despesas compartilhadas em um grupo. Cada despesa é
+                        atribuída aos responsáveis por cada pagamento. Com base nessas informações, a plataforma realiza
+                        os cálculos necessários para determinar o valor preciso que cada participante deve pagar e o
+                        respectivo beneficiário.</div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading2">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse2"
-                          aria-expanded="false" aria-controls="collapse2">What is a single application?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse2">Quais são os benefícios de utilizar a
+                          DivideUai ?</a> </h5>
                     </div>
                     <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#popularTopics">
-                      <div class="card-body"> Iisque Anim pariatur cliche reprehenderit, enim eiusmod high life
-                        accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
-                        moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
-                        et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident. Ad vegan excepteur butcher vice lomo. </div>
+                      <div class="card-body"> Ao utilizar nossa plataforma, você terá uma maneira ágil e eficiente de
+                        dividir os custos com seus amigos, familiares ou colegas de casa. A plataforma automatiza os
+                        cálculos, evitando o trabalho manual de fazer as contas individualmente. Isso garante que cada
+                        participante pague exatamente a quantia correta e que os pagamentos sejam atribuídos aos
+                        responsáveis correspondentes, proporcionando transparência e equidade. </div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading3">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse3"
-                          aria-expanded="false" aria-controls="collapse3">What are some examples of permitted end
-                          products?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse3">Posso controlar diferentes tipos de despesas
+                          nessa plataforma? </a> </h5>
                     </div>
                     <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#popularTopics">
-                      <div class="card-body"> Iisque persius interesset his et, in quot quidam persequeris vim, ad mea
-                        essent possim iriure. Mutat tacimates id sit. Ridens mediocritatem ius an, eu nec magna
-                        imperdiet. </div>
+                      <div class="card-body">Sim, você pode registrar diferentes tipos de despesas na plataforma. Seja
+                        para dividir contas de aluguel, compras de supermercado, jantares ou viagens, a plataforma
+                        permite que você atribua as despesas aos responsáveis corretos e calcule os valores a serem
+                        pagos. Dessa forma, você terá um controle completo sobre as despesas compartilhadas em diversos
+                        contextos.</div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading4">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse4"
-                          aria-expanded="false" aria-controls="collapse4">I'm not sure if my use is covered. What should
-                          I do?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse4">Como faço para me cadastrar na plataforma?
+                        </a> </h5>
                     </div>
                     <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#popularTopics">
-                      <div class="card-body"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on
-                        it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                        vice lomo. </div>
+                      <div class="card-body">O processo de cadastro na plataforma é simples. Basta acessar nosso site e
+                        localizar a opção de registro. Você será solicitado a fornecer algumas informações básicas, como
+                        nome de usuário, endereço de e-mail e senha. Após preencher esses dados, você estará pronto para
+                        começar a utilizar a plataforma e registrar suas despesas compartilhadas.</div>
                     </div>
                   </div>
                   <div class="card">
                     <div class="card-header" id="heading5">
                       <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse5"
-                          aria-expanded="false" aria-controls="collapse5">What is a single application?</a> </h5>
+                          aria-expanded="false" aria-controls="collapse5">Essa plataforma é segura para o armazenamento
+                          das informações?</a> </h5>
                     </div>
                     <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#popularTopics">
-                      <div class="card-body"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on
-                        it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                        vice lomo. </div>
+                      <div class="card-body">Sim, a segurança das suas informações é uma prioridade para nós. Utilizamos
+                        medidas de segurança avançadas para proteger seus dados pessoais e garantir a confidencialidade
+                        das suas transações. Nossos sistemas são regularmente atualizados e monitorados para evitar
+                        qualquer acesso não autorizado. Além disso, não compartilhamos suas informações com terceiros
+                        sem o seu consentimento. Sua privacidade e segurança estão em boas mãos.</div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" id="heading6">
-                      <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse6"
-                          aria-expanded="false" aria-controls="collapse6">Am I allowed to modify the item that I
-                          purchased?</a> </h5>
-                    </div>
-                    <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#popularTopics">
-                      <div class="card-body"> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on
-                        it squid single-origin coffee nulla assumenda shoreditch et. Ad vegan excepteur butcher vice
-                        lomo. </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -304,12 +614,14 @@
             </ul>
             <h4>Fonts:</h4>
             <ul>
-              <li>Icons Font Face - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+              <li>Google Fonts - <a target="_blank" href="https://fonts.google.com/">https://fonts.google.com/</a>
+              </li>
             </ul>
             <h4>Scripts:</h4>
             <ul>
-              <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a></li>
-              <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+              <li>jQuery - <a target="_blank" href="https://www.jquery.com/">https://www.jquery.com/</a></li>
+              <li>Bootstrap 5 - <a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a></li>
+              <li>Bootstrap Icons - <a target="_blank" href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></li>
             </ul>
           </section>
 
@@ -326,8 +638,8 @@
     <footer id="footer" class="section bg-dark footer-text-light">
       <div class="container">
         <p class="text-center">Modelo adaptado de <a
-            href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>  - Design &amp; Develop by <a class="btn-link" target="_blank"
-            href="http://www.harnishdesign.net/">HarnishDesign</a></p>
+            href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a> - Design &amp;
+          Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a></p>
       </div>
     </footer>
     <!-- Footer end -->
@@ -336,8 +648,7 @@
   <!-- Document Wrapper end -->
 
   <!-- Back To Top -->
-  <a id="back-to-top" data-toggle="tooltip" title="Topo" href="javascript:void(0)"><i
-      class="fa fa-chevron-up"></i></a>
+  <a id="back-to-top" data-toggle="tooltip" title="Topo" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript
 ============================ -->
