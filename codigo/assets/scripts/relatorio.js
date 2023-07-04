@@ -1,34 +1,3 @@
-/*var Lancamentos = [
-  {
-    Descricao: "Rolê",
-    Categoria: "bebida",
-    Valor: 30.0,
-    Data: "12/05/2023",
-    Grupo: "amigos",
-    Responsaveis: ["Renan", "Julio", "Maria"],
-  },
-  {
-    Descricao: "Balada",
-    Categoria: "role",
-    Valor: 100.0,
-    Data: "12/05/2023",
-    Grupo: "amigos",
-    Responsaveis: ["Renan", "Julio"],
-  },
-  {
-    Descricao: "Futebol",
-    Categoria: "lazer",
-    Valor: 20.0,
-    Data: "12/05/2023",
-    Grupo: "amigos",
-    Responsaveis: ["Renan"],
-  },
-];*/
-
-
-/* CONVERTER VALOR DE STRING PARA INTEIRO */
-/* USAR METÓDO SPLIT PARA PEGAR RESPONSÁVEIS E CONTÁLOS */
-
 function ExibirLancamentos() {
   var totalHTML = "";
 
