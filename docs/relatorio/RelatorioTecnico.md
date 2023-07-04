@@ -378,7 +378,7 @@ A seguir, apresentamos um diagrama que ilustra a arquitetura da solução, desta
 
 > **Diagrama da Arquitetura**:
 > 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+> ![Exemplo de Arquitetura](images/ArquiteturaSolução.png)
 
 # Avaliação da Aplicação
 
