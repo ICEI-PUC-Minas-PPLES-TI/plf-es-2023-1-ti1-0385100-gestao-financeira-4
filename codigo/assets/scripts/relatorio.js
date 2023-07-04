@@ -1,34 +1,3 @@
-/*var Lancamentos = [
-  {
-    Descricao: "Rolê",
-    Categoria: "bebida",
-    Valor: 30.0,
-    Data: "12/05/2023",
-    Grupo: "amigos",
-    Responsaveis: ["Renan", "Julio", "Maria"],
-  },
-  {
-    Descricao: "Balada",
-    Categoria: "role",
-    Valor: 100.0,
-    Data: "12/05/2023",
-    Grupo: "amigos",
-    Responsaveis: ["Renan", "Julio"],
-  },
-  {
-    Descricao: "Futebol",
-    Categoria: "lazer",
-    Valor: 20.0,
-    Data: "12/05/2023",
-    Grupo: "amigos",
-    Responsaveis: ["Renan"],
-  },
-];*/
-
-
-/* CONVERTER VALOR DE STRING PARA INTEIRO */
-/* USAR METÓDO SPLIT PARA PEGAR RESPONSÁVEIS E CONTÁLOS */
-
 function ExibirLancamentos() {
   var totalHTML = "";
 
@@ -42,7 +11,7 @@ function ExibirLancamentos() {
   for (let i = 0; i < Lancamentos.length; i++) {
     const responsaveis = Lancamentos[i].responsaveis.split(','); //Separar responsáveis nome dos responsáveis por ,
     const quantidadeResponsaveis = responsaveis.length; // Pega a quantidade de responsáveis
-    const PegaValor = parseInt(Lancamentos[i].valor, 10);
+    const PegaValor = parseInt(Lancamentos[i].valor, 10); //Convertendo string para inteiro
     //Calcula o valor individual a pagar por evento
     const ValorEvento = PegaValor / quantidadeResponsaveis;
 
