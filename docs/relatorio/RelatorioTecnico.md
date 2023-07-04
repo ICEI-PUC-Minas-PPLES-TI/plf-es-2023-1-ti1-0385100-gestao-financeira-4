@@ -583,10 +583,4 @@ Após a realização dos testes, foram identificados alguns pontos fortes e frac
 
 # Referências Bibliográficas
 
-> A lista a seguir traz as referências utilizadas nesse projeto. são elas: 
->  Instituto Pet Brasil,  o país tem 3,9 milhões de animais em condição de vulnerabilidade. 2019. 
->  Disponível em: http://institutopetbrasil.com/imprensa/pais-tem-39-milhoes-de-animais-em-condicao-de-vulnerabilidade/#:~:text=O%20levantamento%20do%20Instituto%20Pet,mais%20de%20172%20mil%20animais.  Acesso em 15/04/2023.
->
->  Jane A, A. São mais de 20 anos nessa triste realidade, Instagram. 2022.
->  Disponível em: https://www.instagram.com/reel/CqTDkpcjFMD/?igshid=YmMyMTA2M2Y= Acesso em 29/03/2023.
->
+> A lista a seguir traz as referências utilizadas nesse projeto. são elas:
