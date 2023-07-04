@@ -12,7 +12,7 @@ function login(event) {
   
     if (loggedInUser) {
       alert("Login bem-sucedido!");
-      window.location.href = "index.html";
+      window.location.href = "/codigo/index.html";
     } else {
       alert("Usuário ou senha incorretos. Por favor, tente novamente.");
     }
