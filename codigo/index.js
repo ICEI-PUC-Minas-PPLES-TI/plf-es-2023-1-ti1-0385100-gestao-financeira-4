@@ -14,8 +14,6 @@ menuItem.forEach((item)=>
     item.addEventListener('click', selectLink)
 )
 
-
-
 var btnExp = document.querySelector('#btn-exp')
 var menuSide = document.querySelector('.menu-lateral')
 var colEnfeite = document.querySelector('.col-enfeite')

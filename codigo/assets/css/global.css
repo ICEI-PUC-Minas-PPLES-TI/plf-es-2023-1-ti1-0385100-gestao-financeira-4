@@ -153,3 +153,7 @@ ul li.ativo a {
 }
 
 /* Fim Padronização de botões */
+
+.card img:hover, .card-title:hover  {
+  cursor: pointer;
+}
