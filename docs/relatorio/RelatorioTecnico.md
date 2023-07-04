@@ -327,25 +327,56 @@ A proposta de solução do projeto visa desenvolver uma plataforma online que ob
 
 ## Tecnologias Utilizadas
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
+As tecnologias utilizadas para a implementação da solução incluem:
+
+> **HTML:** Linguagem de marcação utilizada para estruturar e apresentar o conteúdo da interface do usuário.
 > 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+> **CSS:** Linguagem de estilo que define a aparência e o layout dos elementos HTML na interface do usuário.
+> 
+> **JavaScript:** Linguagem de programação usada para adicionar interatividade e funcionalidades dinâmicas à interface do usuário.
+> 
+> **JSON:** Formato de dados leve e fácil de ler e escrever, utilizado para transmitir informações entre o cliente e o servidor.
+> 
+> **Bootstrap:** Framework CSS que fornece uma série de componentes e estilos predefinidos para agilizar o desenvolvimento da interface do usuário.
+> 
+> **Visual Studio Code:** IDE de desenvolvimento utilizada para escrever e editar o código-fonte.
+> 
+> **Replit:** Ambiente de desenvolvimento online que permite escrever, executar e testar código em várias linguagens.
+> 
+> **GitHub Pages:** Serviço de hospedagem estática fornecido pelo GitHub para publicar e compartilhar páginas da web.
+> 
+> **Trello:** Ferramenta de gerenciamento de projetos que ajuda a organizar tarefas e colaborar em equipe.
+> 
+> **OneDrive:** Serviço de armazenamento em nuvem da Microsoft utilizado para armazenar e compartilhar arquivos relacionados ao projeto.
+> 
+> **Miro:** Ferramenta de colaboração online utilizada para criar diagramas, realizar brainstorming e colaborar visualmente.
+> 
+> **Canva:** Ferramenta de design gráfico online utilizada para criar e editar imagens, gráficos e outros elementos visuais.
+> 
+> **Figma:** Ferramenta de design de interface do usuário e prototipagem utilizada para criar e colaborar em designs de aplicativos e sites.
+> 
+> **Google Fonts:** Biblioteca de fontes online gratuita fornecida pelo Google, que permite adicionar estilos tipográficos à interface do usuário.
+> 
+> **Google Images:** Motor de busca de imagens do Google usado para encontrar e obter imagens relevantes para o projeto.
+> 
+> **This Person Does Not Exist:** Recurso online que gera imagens realistas de pessoas inexistentes, útil para ilustrar perfis de usuários.
+> 
+> **Discord:** Plataforma de comunicação por voz, vídeo e texto utilizada para facilitar a comunicação e colaboração entre os membros da equipe.
+> 
+> **Notion:** Ferramenta de produtividade colaborativa utilizada para criar documentos, gerenciar tarefas e compartilhar informações importantes.
+
+As tecnologias utilizadas neste projeto são interconectadas e desempenham diferentes papéis em cada etapa do desenvolvimento e implantação. A interface do usuário é criada com HTML, CSS e JavaScript, enquanto a troca de dados ocorre por meio do formato JSON. 
+
+O projeto é hospedado no GitHub Pages para fácil acesso e visualização. Além disso, são utilizadas ferramentas como Trello para gerenciamento, OneDrive para armazenamento em nuvem e Miro, Canva e Figma para design e colaboração. 
+
+A comunicação entre os membros da equipe é feita através do Discord e a organização de informações é realizada no Notion. Essas tecnologias se complementam para possibilitar o desenvolvimento eficiente e a implantação bem-sucedida do projeto.
+
 
 ## Arquitetura da solução
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
-> 
-> **Exemplo do diagrama de Arquitetura**:
+A seguir, apresentamos um diagrama que ilustra a arquitetura da solução, destacando os módulos e as tecnologias utilizadas. Essa representação visual nos permite compreender melhor a interação entre os componentes e como eles trabalham em conjunto para alcançar os objetivos do projeto.
+
+> **Diagrama da Arquitetura**:
 > 
 > ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
 
