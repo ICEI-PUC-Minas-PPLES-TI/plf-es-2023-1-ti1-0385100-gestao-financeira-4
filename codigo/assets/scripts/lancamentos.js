@@ -20,13 +20,8 @@ function exibeLancamentoNaTela(lancamentos) {
   const tabelaBody = document.getElementById("tabela-body");
   tabelaBody.innerHTML = "";
 
-  const lancamentosArmazenados =
-    JSON.parse(localStorage.getItem("lancamentos")) || [];
-
-  const todosLancamentos = [...lancamentos, ...lancamentosArmazenados];
-
-  for (let i = 0; i < todosLancamentos.length; i++) {
-    const lancamento = todosLancamentos[i];
+  for (let i = 0; i < lancamentos.length; i++) {
+    const lancamento = lancamentos[i];
     const row = document.createElement("tr");
     const corSpan = gerarCorAleatoria();
     const corLinha = i % 2 === 1 ? "#ECECEC" : "#FFFFFF";
@@ -44,6 +39,11 @@ function exibeLancamentoNaTela(lancamentos) {
   }
 }
 
+function obterIdDaUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("id");
+}
+
 function adicionarLancamento(event) {
   event.preventDefault();
 
@@ -53,7 +53,7 @@ function adicionarLancamento(event) {
   const data = document.getElementById("colunaData").value;
   const grupo = document.getElementById("colunaGrupo").value;
   const responsaveis = document.getElementById("colunaResponsaveis").value;
-
+  const id = obterIdDaUrl();
   const lancamento = {
     descricao,
     categoria,
@@ -61,6 +61,7 @@ function adicionarLancamento(event) {
     data,
     grupo,
     responsaveis,
+    id,
   };
 
   const lancamentos = JSON.parse(localStorage.getItem("lancamentos")) || [];
@@ -71,32 +72,39 @@ function adicionarLancamento(event) {
 
   document.getElementById("cardForm").reset();
 
-  exibeLancamentoNaTela(lancamentos);
+  exibeLinhasTabela();
+
+  fecharConta(id);
 }
 
-function buscaDadosTabela(url) {
-  return fetch(url).then(function (response) {
-    return response.json();
-  });
+function fecharConta(eventId) {
+  window.location.href = `relatorio.html?id=${eventId}`;
 }
 
 function exibeLinhasTabela() {
-  const url = "../assets/data/lancamentos.json";
-  buscaDadosTabela(url).then(function (lancamentos) {
-    exibeLancamentoNaTela(lancamentos);
-  });
+  const cardId = obterIdDaUrl();
+  const lancamentosArmazenados =
+    JSON.parse(localStorage.getItem("lancamentos")) || [];
+  const lancamentosFiltrados = lancamentosArmazenados.filter(
+    (lancamento) => lancamento.id === cardId
+  );
+  exibeLancamentoNaTela(lancamentosFiltrados);
 }
 
-window.addEventListener("load", exibeLinhasTabela);
+window.addEventListener("load", function () {
+  const cardId = obterIdDaUrl();
+  exibeLinhasTabela(cardId);
+});
 
 const form = document.getElementById("cardForm");
 form.addEventListener("submit", function (event) {
-  adicionarLancamento(event);
-  exibeLancamentoNaTela(JSON.parse(localStorage.getItem("lancamentos")) || []);
+  const id = obterIdDaUrl(); // Obtém o ID do evento da URL
+  adicionarLancamento(event, id);
 });
 
 document
   .getElementById("calculoFinalButton")
   .addEventListener("click", function () {
-    window.location.href = "relatorio.html";
+    const id = obterIdDaUrl(); // Obtém o ID do evento da URL
+    fecharConta(id);
   });
