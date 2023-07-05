@@ -18,4 +18,10 @@
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+> **Baixar o ZIP do projeto:**
+> 
+> *Repositório GitHub > Clone > Download ZIP*
+>
+> **Utilizar o programa VIsual Studio Code abrir o projeto na pasta salva:**
+>
+> *Acessar o login.html ou cadastro.html*
