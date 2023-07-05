@@ -246,7 +246,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 > Ao acessar a tela de Relátorio Geral, também será possível visualizar o histórico de gastos lançados, e os repasses que deverá ser feitos para cada membro adicionados nos grupos ou membros. 
 
-> ![Exemplo de Wireframe](images/RelatorioGeral.jpg) 
+> ![Exemplo de Wireframe](images/RelatorioGeral.jpg)
+
+> [Link de Acesso aos Wireframes:](https://www.figma.com/file/psUMHQPQL3dAJdlWIKzhjX/DivideUai!-(Copy)?type=design&node-id=0%3A1&mode=design&t=HYhpBENFhaQKTJgm-1)
 
 # Metodologia
 
