@@ -42,6 +42,7 @@
 - [Projeto da Solução](#projeto-da-solução)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
   - [Arquitetura da solução](#arquitetura-da-solução)
+  - [Hospedagem do Projeto](#hospedagem-projeto)
 - [Avaliação da Aplicação](#avaliação-da-aplicação)
   - [Plano de Testes](#plano-de-testes)
   - [Ferramentas de Testes (Opcional)](#ferramentas-de-testes-opcional)
@@ -379,6 +380,10 @@ A seguir, apresentamos um diagrama que ilustra a arquitetura da solução, desta
 > **Diagrama da Arquitetura**:
 > 
 > ![Exemplo de Arquitetura](images/ArquiteturaSolução.png)
+
+## Hospedagem do Projeto
+
+[Link](https://oarthurfc.com/codigo/index.html)
 
 # Avaliação da Aplicação
 
