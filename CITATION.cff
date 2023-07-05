@@ -1,31 +1,29 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: DivideUai
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Ferreira Costa
+    given-names: Arthur
+  - family-names: Silva Leite
+    given-names: Enrique
+  - family-names: Alves dos Santos
+    given-names: Érica
+  - family-names: Arthur Oliveira Silva
+    given-names: Pedro
+  - family-names: Felipe Torres
+    given-names: Sthel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Soares Viera de Vasconcelos
+    given-names: Amalia
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
 keywords:
-  - 
-  - 
-repository-code: 
+  -
+  -
+repository-code:
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
