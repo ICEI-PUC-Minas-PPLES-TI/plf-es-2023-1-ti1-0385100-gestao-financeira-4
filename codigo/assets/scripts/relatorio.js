@@ -37,7 +37,7 @@ function ExibirLancamentos() {
 
   for (const responsavel in somaResponsaveis) {
     console.log(`${responsavel}: ${somaResponsaveis[responsavel]}`);
-    total.innerHTML += `<div class="resultado"><p>${responsavel}</p><span>R$${somaResponsaveis[responsavel]}</span></div>`;
+    total.innerHTML += `<div class="resultado"><p>${responsavel}</p><span>R$${somaResponsaveis[responsavel].toFixed(2)}</span></div>`;
   }
 }
 
