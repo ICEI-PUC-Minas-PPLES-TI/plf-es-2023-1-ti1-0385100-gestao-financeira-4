@@ -386,6 +386,7 @@ A seguir, apresentamos um diagrama que ilustra a arquitetura da solução, desta
 ## Hospedagem do Projeto
 
 [Link](https://oarthurfc.com/codigo/index.html)
+
 [Documentação](https://oarthurfc.com/divide-uai/codigo/doc/)
 
 # Avaliação da Aplicação
